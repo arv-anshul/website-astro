@@ -1,0 +1,112 @@
+name: Anshul Raj Verma
+avatar_url: https://github.com/arv-anshul.png
+resume_url: https://cdn.jsdelivr.net/gh/arv-anshul/resume@main/pdf/basic.pdf
+intro_text: |
+  Hello! I'm Anshul Raj Verma, a Data Scientist passionate about harnessing GenAI to solve real-world problems.
+  Since 2021, I've sharpened my skills through a six-month Data Science & AI internship and a series of self-driven
+  projects, becoming proficient in Python and Data Science concepts. I've also built end-to-end GenAI applications
+  using LangChain, LangGraph, LlamaIndex, and core MCP concepts—experience that's fueled my drive to design
+  intelligent, scalable solutions.
+
+socials:
+  - name: Website
+    icon: lucide-globe
+    url: https://arv-anshul.github.io
+  - name: GitHub
+    icon: lucide-github
+    url: https://github.com/arv-anshul
+  - name: LinkedIn
+    icon: lucide-linkedin
+    url: https://linkedin.com/in/arv-anshul
+  - name: E-Mail
+    icon: lucide-mail
+    url: mailto:arv.anshul.1864@gmail.com
+
+tech_stack:
+  Programming Languages:
+    - name: Python
+      icon: si-python
+    - name: HTML
+      icon: si-html5
+    - name: CSS
+      icon: si-css
+    - name: Bash
+      icon: si-gnubash
+    - name: Rust
+      icon: si-rust
+    - name: JavaScript
+      icon: si-javascript
+    - name: Go
+      icon: si-go
+    - name: TypeScript
+      icon: si-typescript
+  Backend Tools:
+    - name: FastAPI
+      icon: si-fastapi
+    - name: MongoDB
+      icon: si-mongodb
+    - name: MySQL
+      icon: si-mysql
+    - name: Redis
+      icon: si-redis
+  Dev Tools:
+    - name: pre-commit
+      icon: si-precommit
+    - name: Starship
+      icon: si-starship
+    - name: Raycast
+      icon: si-raycast
+    - name: Zed Code Editor
+      icon: si-zedindustries
+    - name: Typst
+      icon: si-typst
+    - name: Google Gemini
+      icon: si-googlegemini
+  Dev Ops & ML Ops:
+    - name: Docker
+      icon: si-docker
+    - name: GitHub Actions
+      icon: si-githubactions
+    - name: MLFlow
+      icon: si-mlflow
+    - name: PyPI
+      icon: si-pypi
+  Data Science & GenAI:
+    - name: Scikit-Learn
+      icon: si-scikitlearn
+    - name: Polars
+      icon: si-polars
+    - name: Pandas
+      icon: si-pandas
+    - name: Numpy
+      icon: si-numpy
+    - name: Plotly
+      icon: si-plotly
+    - name: Hugging Face
+      icon: si-huggingface
+    - name: LangChain
+      icon: si-langchain
+    - name: Model Context Protocol
+      icon: si-modelcontextprotocol
+  Python Tools:
+    - name: Pytest
+      icon: si-pytest
+    - name: Pydantic
+      icon: si-pydantic
+    - name: Ruff
+      icon: si-ruff
+    - name: Material for Mkdocs
+      icon: si-materialformkdocs
+    - name: UV
+      icon: si-uv
+    - name: Scrapy
+      icon: si-scrapy
+  Frontend Tools:
+    - name: ShadCN UI
+      icon: si-shadcnui
+    - name: Tailwind CSS
+      icon: si-tailwindcss
+    - name: Vite
+      icon: si-vite
+    - name: VueJs
+      icon: si-vuedotjs
