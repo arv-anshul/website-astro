@@ -1,0 +1,46 @@
+---
+import type { InferEntrySchema } from "astro:content";
+import type { HTMLAttributes } from "astro/types";
+import { Icon } from "astro-icon/components";
+
+interface Props extends HTMLAttributes<"section"> {
+  frontmatter: InferEntrySchema<"blog">;
+}
+
+const { frontmatter, class: className, ...props } = Astro.props as Props;
+---
+
+<section
+  class:list={["bg-fd-accent/30 flex flex-col gap-4 w-full px-4 py-6 rounded-xl border md:px-6", className]}
+  {...props}
+>
+  <div class="flex items-start justify-between">
+    <div class="flex flex-col gap-1">
+      <p class="font-bold text-3xl">{frontmatter.title}</p>
+      <p class="flex gap-3 text-xs text-fd-muted-foreground">
+        <span class="flex gap-0.5">
+          <Icon name="lucide:calendar" size={15} />
+          {frontmatter.date.toLocaleDateString("en-IN", {
+            year: "numeric",
+            month: "short",
+            day: "2-digit",
+          })}
+        </span>
+        <span class="flex gap-0.5">
+          <Icon name="lucide:user-pen" size={15} />
+          {frontmatter.author}
+        </span>
+      </p>
+    </div>
+    <Icon name={frontmatter.icon} size={60} />
+  </div>
+
+  <p>{frontmatter.description}</p>
+
+  <a
+    href="/blog"
+    class="flex items-center gap-0.5 w-fit text-fd-muted-foreground border-b-fd-muted-foreground hover:border-b-fd-foreground hover:text-fd-foreground transition-colors"
+  >
+    <Icon name="lucide:arrow-left" size={20} /> Back
+  </a>
+</section>

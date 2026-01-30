@@ -1,0 +1,37 @@
+---
+import { type CollectionEntry, getCollection, render } from "astro:content";
+import type { GetStaticPaths } from "astro";
+import BlogPostCard from "@/components/blog-post-card.astro";
+import BaseLayout from "@/layouts/base-layout.astro";
+
+interface Props {
+  post: CollectionEntry<"blog">;
+}
+
+export const getStaticPaths = (async () => {
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({
+    params: {
+      post: post.filePath?.replace("content/blog", "").replace(".mdx", ""),
+    },
+    props: { post },
+  }));
+}) satisfies GetStaticPaths;
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<BaseLayout
+  title={`${post.data.title} - ARV Blog`}
+  description={post.data.description}
+>
+  <div
+    class="flex flex-col flex-1 mx-auto md:max-w-3/5 items-center justify-center px-4 py-8"
+  >
+    <BlogPostCard frontmatter={post.data} />
+    <article class="prose mt-10 w-full md:min-w-10/12">
+      <Content />
+    </article>
+  </div>
+</BaseLayout>

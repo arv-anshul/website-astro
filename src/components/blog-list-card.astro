@@ -1,0 +1,47 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import { Icon } from "astro-icon/components";
+
+interface BlogData {
+  title: string;
+  description: string;
+  date: Date;
+  icon: string;
+  author: string;
+}
+
+interface Props extends HTMLAttributes<"a"> {
+  data: BlogData;
+}
+
+const { data, class: className, ...props } = Astro.props as Props;
+---
+
+<a
+  class:list={["relative flex flex-col gap-4 rounded-xl border bg-fd-card p-4 hover:bg-fd-accent/80", className]}
+  {...props}
+>
+  <div class="flex justify-between">
+    <div class="flex flex-col gap-1">
+      <p class="font-bold text-2xl">{data.title}</p>
+      <p class="flex gap-3 text-xs text-fd-muted-foreground">
+        <span class="flex gap-0.5">
+          <Icon name="lucide:calendar" size={15} />
+          {data.date.toLocaleDateString("en-IN", {
+            year: "numeric",
+            month: "short",
+            day: "2-digit",
+          })}
+        </span>
+        <span class="flex gap-0.5">
+          <Icon name="lucide:user-pen" size={15} />
+          {data.author}
+        </span>
+      </p>
+    </div>
+    <Icon name={data.icon} size={35} />
+  </div>
+  <p>
+    {data.description.length > 100 ? `${data.description.slice(0, 100)}...` : data.description}
+  </p>
+</a>
