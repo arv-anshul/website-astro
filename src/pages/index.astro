@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import TechStackCard from "@/components/ui/tech-stack-card.astro";
+import TechStackCard from "@/components/tech-stack-card.astro";
 import BaseLayout from "@/layouts/base-layout.astro";
 import { loadInfoData } from "@/lib/data-loaders/info";
 
@@ -43,7 +43,6 @@ const info = await loadInfoData();
 <BaseLayout title="Home - ARV">
   <div
     class="mb-10 flex flex-1 flex-col items-center justify-center px-4 py-8 text-center"
-    ,
   >
     <Image
       alt="arv-anshul"

@@ -14,18 +14,18 @@ projects:
         icon: si-githubpages
         url: https://arv-anshul.github.io/yt-comment-sentiment/
     tech_icons:
-      - docker
-      - fastapi
-      - githubpages
-      - mlflow
-      - polars
-      - pydantic
-      - render
-      - shadcnui
-      - uv
-      - vite
-      - vuedotjs
-      - youtube
+      - simple-icons:docker
+      - simple-icons:fastapi
+      - simple-icons:githubpages
+      - simple-icons:mlflow
+      - simple-icons:polars
+      - simple-icons:pydantic
+      - simple-icons:render
+      - simple-icons:shadcnui
+      - simple-icons:uv
+      - simple-icons:vite
+      - simple-icons:vuedotjs
+      - simple-icons:youtube
     completed_on: December, 2024
 
   - primary_url: canvas-ai.md
@@ -39,13 +39,13 @@ projects:
         icon: si-github
         url: https://github.com/arv-anshul/canvas-ai
     tech_icons:
-      - astral
-      - docker
-      - fastapi
-      - googlegemini
-      - langchain
-      - pydantic
-      - streamlit
+      - simple-icons:astral
+      - simple-icons:docker
+      - simple-icons:fastapi
+      - simple-icons:googlegemini
+      - simple-icons:langchain
+      - simple-icons:pydantic
+      - simple-icons:streamlit
     completed_on: September, 2024
 
   - primary_url: yt-watch-history/index.md
@@ -63,21 +63,21 @@ projects:
         icon: si-github
         url: https://github.com/arv-anshul/yt-watch-history-v2
       - name: Post
-        icon: lucide-linkedin
+        icon: lucide:linkedin
         url: https://www.linkedin.com/posts/arv-anshul_i-am-building-this-streamlit-app-this-activity-7140558851036098560-wwnU?utm_source=share&utm_medium=member_desktop
       - name: Notebooks
         icon: si-jupyter
         url: https://github.com/arv-anshul/notebooks/tree/main/yt-watch-history
     tech_icons:
-      - docker
-      - fastapi
-      - mlflow
-      - mongodb
-      - plotly
-      - polars
-      - pydantic
-      - scikitlearn
-      - streamlit
+      - simple-icons:docker
+      - simple-icons:fastapi
+      - simple-icons:mlflow
+      - simple-icons:mongodb
+      - simple-icons:plotly
+      - simple-icons:polars
+      - simple-icons:pydantic
+      - simple-icons:scikitlearn
+      - simple-icons:streamlit
     completed_on: January, 2024
 
   - primary_url: spotify-analysis.md
@@ -97,14 +97,14 @@ projects:
         icon: si-jupyter
         url: https://github.com/arv-anshul/notebooks/tree/main/spotify-analysis
     tech_icons:
-      - jupyter
-      - plotly
-      - polars
-      - ruff
-      - rye
-      - scikitlearn
-      - spotify
-      - streamlit
+      - simple-icons:jupyter
+      - simple-icons:plotly
+      - simple-icons:polars
+      - simple-icons:ruff
+      - simple-icons:rye
+      - simple-icons:scikitlearn
+      - simple-icons:spotify
+      - simple-icons:streamlit
     completed_on: March, 2024
 
   - primary_url: https://github.com/arv-anshul/ecommerce-scrapper-api
@@ -123,12 +123,12 @@ projects:
         icon: si-github
         url: https://github.com/arv-anshul/ecommerce-scrapper-api
       - name: Post
-        icon: lucide-linkedin
+        icon: lucide:linkedin
         url: https://www.linkedin.com/posts/arv-anshul_fastapi-api-ecommerce-activity-7128575593570340864-WE2m?utm_source=share&utm_medium=member_desktop
     tech_icons:
-      - fastapi
-      - flipkart
-      - pydantic
+      - simple-icons:fastapi
+      - simple-icons:flipkart
+      - simple-icons:pydantic
     completed_on: November, 2023
 
   - primary_url: https://github.com/arv-anshul/campusx-real-estate
@@ -146,12 +146,12 @@ projects:
         icon: si-github
         url: https://github.com/arv-anshul/campusx-real-estate
       - name: Post
-        icon: lucide-linkedin
+        icon: lucide:linkedin
         url: https://www.linkedin.com/posts/arv-anshul_update-regarding-my-real-estate-project-activity-7109444738855948288-NyI9?utm_source=share&utm_medium=member_desktop
     tech_icons:
-      - plotly
-      - scikitlearn
-      - streamlit
+      - simple-icons:plotly
+      - simple-icons:scikitlearn
+      - simple-icons:streamlit
     completed_on: October, 2023
 
   - primary_url: https://github.com/arv-anshul/freeapi-py
@@ -166,14 +166,14 @@ projects:
         icon: si-github
         url: https://github.com/arv-anshul/freeapi-py
       - name: Post
-        icon: lucide-linkedin
+        icon: lucide:linkedin
         url: https://www.linkedin.com/posts/arv-anshul_im-happy-to-share-this-freeapi-in-python-activity-7192135714594000896-ZRqh?utm_source=share&utm_medium=member_desktop
     tech_icons:
-      - docker
-      - fastapi
-      - mongodb
-      - python
-      - rye
+      - simple-icons:docker
+      - simple-icons:fastapi
+      - simple-icons:mongodb
+      - simple-icons:python
+      - simple-icons:rye
     completed_on: May, 2024
 
   - primary_url: https://github.com/arv-anshul/curler
@@ -187,14 +187,14 @@ projects:
         icon: si-github
         url: https://github.com/arv-anshul/curler
       - name: Post
-        icon: lucide-linkedin
+        icon: lucide:linkedin
         url: https://www.linkedin.com/posts/arv-anshul_hey-i-am-happy-to-tell-you-that-i-activity-7118254699127975939-ePyf?utm_source=share&utm_medium=member_desktop
       - name: PyPi
         icon: si-pypi
         url: https://pypi.org/p/curler
     tech_icons:
-      - pypi
-      - python
+      - simple-icons:pypi
+      - simple-icons:python
     completed_on: November, 2023
 
   - primary_url: https://github.com/arv-anshul/99acres-scrape
@@ -214,16 +214,16 @@ projects:
         icon: si-kaggle
         url: https://www.kaggle.com/datasets/arvanshul/gurgaon-real-estate-99acres-com
       - name: Post
-        icon: lucide-linkedin
+        icon: lucide:linkedin
         url: https://www.linkedin.com/posts/arv-anshul_python-asynchronousprogramming-datascience-activity-7101173151123861504-Y29E?utm_source=share&utm_medium=member_desktop
       - name: App
         icon: si-streamlit
         url: https://arv-anshul-99acres-2a.streamlit.app/
     tech_icons:
-      - curl
-      - pandas
-      - python
-      - streamlit
+      - simple-icons:curl
+      - simple-icons:pandas
+      - simple-icons:python
+      - simple-icons:streamlit
     completed_on: October, 2023
 
   - primary_url: campusx.md
@@ -235,21 +235,21 @@ projects:
         icon: si-github
         url: https://github.com/arv-anshul/campusx
       - name: Post
-        icon: lucide-linkedin
+        icon: lucide:linkedin
         url: https://www.linkedin.com/posts/arv-anshul_yesterday-nitish-singh-sir-recommend-activity-7162317549496381440-JskB?utm_source=share&utm_medium=member_desktop
       - name: Website
         icon: si-materialformkdocs
         url: https://arv-anshul.github.io/campusx
     tech_icons:
-      - curl
-      - dotenv
-      - githubactions
-      - githubpages
-      - jinja
-      - json
-      - materialformkdocs
-      - precommit
-      - pytest
-      - python
-      - rye
+      - simple-icons:curl
+      - simple-icons:dotenv
+      - simple-icons:githubactions
+      - simple-icons:githubpages
+      - simple-icons:jinja
+      - simple-icons:json
+      - simple-icons:materialformkdocs
+      - simple-icons:precommit
+      - simple-icons:pytest
+      - simple-icons:python
+      - simple-icons:rye
     completed_on: March, 2023

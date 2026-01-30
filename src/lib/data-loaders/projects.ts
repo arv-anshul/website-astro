@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { socialProfileSchema } from "./common";
+import { iconSchema, socialProfileSchema } from "./common";
 
 const projectSchema = z.object({
   primary_url: z.string(), // Not any strict UrlType because this can be a relative url too.
@@ -7,7 +7,7 @@ const projectSchema = z.object({
   description: z.string(),
   highlights: z.array(z.string()).min(3).optional(),
   urls: z.array(socialProfileSchema),
-  tech_icons: z.array(z.string()).min(1),
+  tech_icons: z.array(iconSchema).min(1),
   completed_on: z
     .string()
     .regex(

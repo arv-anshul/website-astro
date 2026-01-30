@@ -10,103 +10,103 @@ intro_text: |
 
 socials:
   - name: Website
-    icon: lucide-globe
+    icon: lucide:globe
     url: https://arv-anshul.github.io
   - name: GitHub
-    icon: lucide-github
+    icon: lucide:github
     url: https://github.com/arv-anshul
   - name: LinkedIn
-    icon: lucide-linkedin
+    icon: lucide:linkedin
     url: https://linkedin.com/in/arv-anshul
   - name: E-Mail
-    icon: lucide-mail
+    icon: lucide:mail
     url: mailto:arv.anshul.1864@gmail.com
 
 tech_stack:
   Programming Languages:
     - name: Python
-      icon: si-python
+      icon: simple-icons:python
     - name: HTML
-      icon: si-html5
+      icon: simple-icons:html5
     - name: CSS
-      icon: si-css
+      icon: simple-icons:css
     - name: Bash
-      icon: si-gnubash
+      icon: simple-icons:gnubash
     - name: Rust
-      icon: si-rust
+      icon: simple-icons:rust
     - name: JavaScript
-      icon: si-javascript
+      icon: simple-icons:javascript
     - name: Go
-      icon: si-go
+      icon: simple-icons:go
     - name: TypeScript
-      icon: si-typescript
+      icon: simple-icons:typescript
   Backend Tools:
     - name: FastAPI
-      icon: si-fastapi
+      icon: simple-icons:fastapi
     - name: MongoDB
-      icon: si-mongodb
+      icon: simple-icons:mongodb
     - name: MySQL
-      icon: si-mysql
+      icon: simple-icons:mysql
     - name: Redis
-      icon: si-redis
+      icon: simple-icons:redis
   Dev Tools:
     - name: pre-commit
-      icon: si-precommit
+      icon: simple-icons:precommit
     - name: Starship
-      icon: si-starship
+      icon: simple-icons:starship
     - name: Raycast
-      icon: si-raycast
+      icon: simple-icons:raycast
     - name: Zed Code Editor
-      icon: si-zedindustries
+      icon: simple-icons:zedindustries
     - name: Typst
-      icon: si-typst
+      icon: simple-icons:typst
     - name: Google Gemini
-      icon: si-googlegemini
+      icon: simple-icons:googlegemini
   Dev Ops & ML Ops:
     - name: Docker
-      icon: si-docker
+      icon: simple-icons:docker
     - name: GitHub Actions
-      icon: si-githubactions
+      icon: simple-icons:githubactions
     - name: MLFlow
-      icon: si-mlflow
+      icon: simple-icons:mlflow
     - name: PyPI
-      icon: si-pypi
+      icon: simple-icons:pypi
   Data Science & GenAI:
     - name: Scikit-Learn
-      icon: si-scikitlearn
+      icon: simple-icons:scikitlearn
     - name: Polars
-      icon: si-polars
+      icon: simple-icons:polars
     - name: Pandas
-      icon: si-pandas
+      icon: simple-icons:pandas
     - name: Numpy
-      icon: si-numpy
+      icon: simple-icons:numpy
     - name: Plotly
-      icon: si-plotly
+      icon: simple-icons:plotly
     - name: Hugging Face
-      icon: si-huggingface
+      icon: simple-icons:huggingface
     - name: LangChain
-      icon: si-langchain
+      icon: simple-icons:langchain
     - name: Model Context Protocol
-      icon: si-modelcontextprotocol
+      icon: simple-icons:modelcontextprotocol
   Python Tools:
     - name: Pytest
-      icon: si-pytest
+      icon: simple-icons:pytest
     - name: Pydantic
-      icon: si-pydantic
+      icon: simple-icons:pydantic
     - name: Ruff
-      icon: si-ruff
+      icon: simple-icons:ruff
     - name: Material for Mkdocs
-      icon: si-materialformkdocs
+      icon: simple-icons:materialformkdocs
     - name: UV
-      icon: si-uv
+      icon: simple-icons:uv
     - name: Scrapy
-      icon: si-scrapy
+      icon: simple-icons:scrapy
   Frontend Tools:
     - name: ShadCN UI
-      icon: si-shadcnui
+      icon: simple-icons:shadcnui
     - name: Tailwind CSS
-      icon: si-tailwindcss
+      icon: simple-icons:tailwindcss
     - name: Vite
-      icon: si-vite
+      icon: simple-icons:vite
     - name: VueJs
-      icon: si-vuedotjs
+      icon: simple-icons:vuedotjs

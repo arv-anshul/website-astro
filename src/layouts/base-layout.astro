@@ -1,6 +1,6 @@
 ---
 import "@/styles/global.css";
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/ui/navbar.astro";
 
 interface Props {
   title: string;
@@ -9,7 +9,7 @@ interface Props {
 }
 
 const {
-  title,
+  title = "ARV - Website",
   description = "Personal website of ARV built with Astro.",
   className,
 } = Astro.props as Props;
@@ -26,7 +26,7 @@ const {
     <title>{title}</title>
   </head>
   <body class:list={["relative w-full", className]}>
-    <Navbar client:load />
+    <Navbar sticky />
     <slot />
   </body>
 </html>

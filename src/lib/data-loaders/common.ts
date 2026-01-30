@@ -1,10 +1,12 @@
 import { z } from "zod";
 
+export const iconSchema = z
+  .string()
+  .regex(/^(lucide:|simple-icons:)/)
+  .lowercase();
+
 export const socialProfileSchema = z.object({
   name: z.string(),
-  icon: z
-    .string()
-    .regex(/^(lucide-|si-)/)
-    .lowercase(),
+  icon: iconSchema,
   url: z.url(), // Not z.httpUrl() because it can be mailto:email@email.com type url too.
 });

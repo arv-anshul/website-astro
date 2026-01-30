@@ -9,19 +9,19 @@ friends:
     socials:
       - name: Github
         url: https://github.com/arv-anshul
-        icon: lucide-github
+        icon: lucide:github
       - name: LinkedIn
         url: https://linkedin.com/in/arv-anshul
-        icon: lucide-linkedin
+        icon: lucide:linkedin
       - name: Resume
         url: https://arv-anshul.github.io/resume
-        icon: lucide-scroll-text
+        icon: lucide:scroll-text
       - name: Personal Website
         url: https://arv-anshul.github.io
-        icon: lucide-globe
+        icon: lucide:globe
       - name: Email
         url: mailto:arv.anshul.1864@gmail.com
-        icon: lucide-mail
+        icon: lucide:mail
 
   - name: Wcowin
     primary_url: https://wcowin.work/
@@ -34,13 +34,13 @@ friends:
     socials:
       - name: Github Profile
         url: https://github.com/Wcowin
-        icon: lucide-github
+        icon: lucide:github
       - name: Personal Website
         url: https://wcowin.work/
-        icon: lucide-globe
+        icon: lucide:globe
       - name: Email
         url: mailto:<wangkewen821@gmail.com>
-        icon: lucide-mail
+        icon: lucide:mail
 
   - name: Somto Ogbe
     primary_url: https://linkedin.com/in/somto-ogbe
@@ -54,13 +54,13 @@ friends:
     socials:
       - name: Github Profile
         url: https://github.com/somtoval
-        icon: lucide-github
+        icon: lucide:github
       - name: LinkedIn profile
         url: https://linkedin.com/in/somto-ogbe
-        icon: lucide-linkedin
+        icon: lucide:linkedin
       - name: Email
         url: mailto:ogbesomto4@gmail.com
-        icon: lucide-mail
+        icon: lucide:mail
 
   - name: Rahul Kumar
     primary_url: https://linkedin.com/in/rahul-kumar30
@@ -74,13 +74,13 @@ friends:
     socials:
       - name: Github Profile
         url: https://github.com/rahulkr30
-        icon: lucide-github
+        icon: lucide:github
       - name: LinkedIn profile
         url: https://linkedin.com/in/rahul-kumar30
-        icon: lucide-linkedin
+        icon: lucide:linkedin
       - name: Email
         url: mailto:rahulkr30101@gmail.com
-        icon: lucide-mail
+        icon: lucide:mail
 
   - name: Dipanjan Pathak
     primary_url: https://dipanjan.tech/
@@ -96,13 +96,13 @@ friends:
     socials:
       - name: Github Profile
         url: https://github.com/dipanjanpathak
-        icon: lucide-github
+        icon: lucide:github
       - name: LinkedIn profile
         url: https://www.linkedin.com/in/dipanjanpathak/
-        icon: lucide-linkedin
+        icon: lucide:linkedin
       - name: Email
         url: mailto:dipanjanpathak@gmail.com
-        icon: lucide-mail
+        icon: lucide:mail
       - name: Personal Website
         url: https://dipanjan.tech/
-        icon: lucide-globe
+        icon: lucide:globe

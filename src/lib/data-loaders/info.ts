@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { socialProfileSchema } from "./common";
+import { iconSchema, socialProfileSchema } from "./common";
 
 const infoDataSchema = z.object({
   name: z.string(),
@@ -12,10 +12,7 @@ const infoDataSchema = z.object({
     z.array(
       z.object({
         name: z.string(),
-        icon: z
-          .string()
-          .regex(/^(lucide-|si-)/)
-          .lowercase(),
+        icon: iconSchema,
       })
     )
   ),

@@ -11,11 +11,11 @@ export const navLinkItems = [
 
 export const navIconItems = [
   {
-    icon: "lucide-scroll-text",
+    icon: "lucide:scroll-text",
     link: "https://github.com/arv-anshul",
   },
   {
-    icon: "si-github",
+    icon: "simple-icons:github",
     link: "https://github.com/arv-anshul",
   },
 ];
