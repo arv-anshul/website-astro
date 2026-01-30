@@ -8,10 +8,10 @@ projects:
       VueJs and hosted on GitHub Pages.
     urls:
       - name: Repository
-        icon: si-github
+        icon: simple-icons:github
         url: https://github.com/arv-anshul/yt-comment-sentiment
       - name: Deployed WebApp
-        icon: si-githubpages
+        icon: simple-icons:githubpages
         url: https://arv-anshul.github.io/yt-comment-sentiment/
     tech_icons:
       - simple-icons:docker
@@ -36,7 +36,7 @@ projects:
       containerized with Docker.
     urls:
       - name: Repository
-        icon: si-github
+        icon: simple-icons:github
         url: https://github.com/arv-anshul/canvas-ai
     tech_icons:
       - simple-icons:astral
@@ -57,16 +57,16 @@ projects:
       app which recommend you similar channels on the basis of channel's video titles and tags they had used.
     urls:
       - name: Repository (v1)
-        icon: si-github
+        icon: simple-icons:github
         url: https://github.com/arv-anshul/yt-watch-history
       - name: Repository (v2)
-        icon: si-github
+        icon: simple-icons:github
         url: https://github.com/arv-anshul/yt-watch-history-v2
       - name: Post
         icon: lucide:linkedin
         url: https://www.linkedin.com/posts/arv-anshul_i-am-building-this-streamlit-app-this-activity-7140558851036098560-wwnU?utm_source=share&utm_medium=member_desktop
       - name: Notebooks
-        icon: si-jupyter
+        icon: simple-icons:jupyter
         url: https://github.com/arv-anshul/notebooks/tree/main/yt-watch-history
     tech_icons:
       - simple-icons:docker
@@ -94,7 +94,7 @@ projects:
       - Know your most played track, artist, playlist by year and month.
     urls:
       - name: Jupyter Notebooks
-        icon: si-jupyter
+        icon: simple-icons:jupyter
         url: https://github.com/arv-anshul/notebooks/tree/main/spotify-analysis
     tech_icons:
       - simple-icons:jupyter
@@ -120,7 +120,7 @@ projects:
       - I have also written some tests using `fastapi` builtin `TestClient()`.
     urls:
       - name: Repository
-        icon: si-github
+        icon: simple-icons:github
         url: https://github.com/arv-anshul/ecommerce-scrapper-api
       - name: Post
         icon: lucide:linkedin
@@ -143,7 +143,7 @@ projects:
       - Uses `streamlit` library to show the analysis with beautiful plots from `plotly`.
     urls:
       - name: Repository
-        icon: si-github
+        icon: simple-icons:github
         url: https://github.com/arv-anshul/campusx-real-estate
       - name: Post
         icon: lucide:linkedin
@@ -163,7 +163,7 @@ projects:
       You'll get endpoints for todo, quotes, github user and repository and fun endpoints.
     urls:
       - name: Repository
-        icon: si-github
+        icon: simple-icons:github
         url: https://github.com/arv-anshul/freeapi-py
       - name: Post
         icon: lucide:linkedin
@@ -184,13 +184,13 @@ projects:
       request with `curl` commands.
     urls:
       - name: Repository
-        icon: si-github
+        icon: simple-icons:github
         url: https://github.com/arv-anshul/curler
       - name: Post
         icon: lucide:linkedin
         url: https://www.linkedin.com/posts/arv-anshul_hey-i-am-happy-to-tell-you-that-i-activity-7118254699127975939-ePyf?utm_source=share&utm_medium=member_desktop
       - name: PyPi
-        icon: si-pypi
+        icon: simple-icons:pypi
         url: https://pypi.org/p/curler
     tech_icons:
       - simple-icons:pypi
@@ -208,16 +208,16 @@ projects:
       - Point 3
     urls:
       - name: Repository
-        icon: si-github
+        icon: simple-icons:github
         url: https://github.com/arv-anshul/99acres-scrape
       - name: Datasets
-        icon: si-kaggle
+        icon: simple-icons:kaggle
         url: https://www.kaggle.com/datasets/arvanshul/gurgaon-real-estate-99acres-com
       - name: Post
         icon: lucide:linkedin
         url: https://www.linkedin.com/posts/arv-anshul_python-asynchronousprogramming-datascience-activity-7101173151123861504-Y29E?utm_source=share&utm_medium=member_desktop
       - name: App
-        icon: si-streamlit
+        icon: simple-icons:streamlit
         url: https://arv-anshul-99acres-2a.streamlit.app/
     tech_icons:
       - simple-icons:curl
@@ -232,13 +232,13 @@ projects:
       This project involves gathering data from a course website's HTML structure, followed by developing Python scripts for parsing and extracting essential data. HTTP requests are then made to obtain session resources, with robust testing and data structure maintenance ensuring integrity. Utilizing `mkdocs` and `mkdocs-material`, a professional web page is generated and hosted on GitHub Pages via CI/CD with GitHub Actions.
     urls:
       - name: Repository
-        icon: si-github
+        icon: simple-icons:github
         url: https://github.com/arv-anshul/campusx
       - name: Post
         icon: lucide:linkedin
         url: https://www.linkedin.com/posts/arv-anshul_yesterday-nitish-singh-sir-recommend-activity-7162317549496381440-JskB?utm_source=share&utm_medium=member_desktop
       - name: Website
-        icon: si-materialformkdocs
+        icon: simple-icons:materialformkdocs
         url: https://arv-anshul.github.io/campusx
     tech_icons:
       - simple-icons:curl

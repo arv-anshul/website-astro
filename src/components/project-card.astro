@@ -1,0 +1,52 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import { Icon } from "astro-icon/components";
+import type { ProjectsData } from "@/lib/data-loaders/projects";
+
+type Project = ProjectsData["projects"][number];
+
+interface Props extends HTMLAttributes<"div"> {
+  project: Project;
+}
+
+const { project, class: className, ...props } = Astro.props as Props;
+---
+
+<div
+  class:list={["relative flex flex-col justify-between rounded-xl border bg-fd-card p-6", className]}
+  {...props}
+>
+  <!-- Header -->
+  <div class="mb-2 flex flex-wrap justify-between items-start">
+    <div>
+      <h3 class="text-xl font-semibold">{project.title}</h3>
+      <p class="text-sm text-fd-muted-foreground">{project.completed_on}</p>
+    </div>
+    <!-- URLs / Links -->
+    <div class="flex flex-wrap justify-center items-center gap-1">
+      {project.urls.map((item) => (
+            <a
+              href={item.url}
+              class="inline-flex items-center text-lg p-1.5 border font-medium transition-colors hover:text-fd-primary bg-fd-accent rounded-md"
+              title={item.name}
+            >
+              <Icon name={item.icon} title={item.name} />
+            </a>
+          ))}
+    </div>
+  </div>
+
+  <!-- Description -->
+  <p class="mb-4 text-justify">
+    {project.description.length > 320 ? `${project.description.slice(0, 320)}...` : project.description}
+  </p>
+
+  <!-- Tags -->
+  <div class="flex flex-wrap justify-center gap-3">
+    {project.tech_icons.map((tag) => (
+          <span class="inline-flex items-center justify-center">
+              <Icon name={tag} size={18} />
+          </span>
+        ))}
+  </div>
+</div>
