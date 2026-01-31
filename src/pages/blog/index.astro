@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import BlogListCard from "@/components/blog-list-card.astro";
+import { ItemGroup } from "@/components/starwind/item";
 import BaseLayout from "@/layouts/base-layout.astro";
 
 const posts = await getCollection("blog");
@@ -8,11 +9,11 @@ const posts = await getCollection("blog");
 
 <BaseLayout title="Blog - ARV" description="Blogs written by ARV.">
   <main class="flex-1 w-full max-w-350 mx-auto px-4 py-8">
-    <h1 class="text-4xl font-bold mb-10">Latest Blog Posts</h1>
-    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    <h1 class="font-heading text-4xl font-bold mb-10">Latest Blog Posts</h1>
+    <ItemGroup class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
       {posts.map((post) => (
-          <BlogListCard href={post.filePath?.replace("content", "").replace(".mdx", "")} data={post.data} />
+          <BlogListCard href={`/blog/${post.id}`} data={post.data} />
         ))}
-    </div>
+    </ItemGroup>
   </main>
 </BaseLayout>
