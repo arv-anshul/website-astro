@@ -1,6 +1,14 @@
 ---
 import { Image } from "astro:assets";
-import TechStackCard from "@/components/tech-stack-card.astro";
+import { Icon } from "astro-icon/components";
+import {
+  Item,
+  ItemContent,
+  ItemDescription,
+  ItemGroup,
+  ItemMedia,
+  ItemTitle,
+} from "@/components/starwind/item";
 import BaseLayout from "@/layouts/base-layout.astro";
 import { loadInfoData } from "@/lib/data-loaders/info";
 
@@ -9,31 +17,37 @@ const referLinks = [
     description: "See my projects in detail.",
     url: "/projects",
     title: "Projects",
+    icon: "lucide:rocket",
   },
   {
     description: "Learn more about my experience.",
     url: "/",
     title: "About",
+    icon: "lucide:user",
   },
   {
     description: "See my resume.",
     url: "/resume",
     title: "Resume",
+    icon: "lucide:scroll-text",
   },
   {
     description: "Read my blogs.",
     url: "/blog",
     title: "Blogs",
+    icon: "lucide:newspaper",
   },
   {
     description: "See some of my friends.",
     url: "/friends",
     title: "Friends",
+    icon: "lucide:user",
   },
   {
     description: "See my GitHub profile.",
     url: "https://github.com/arv-anshul",
     title: "GitHub",
+    icon: "simple-icons:github",
   },
 ];
 
@@ -49,6 +63,7 @@ const info = await loadInfoData();
       class:list="w-60 rounded-full"
       inferSize={true}
       src={info.avatar_url}
+      client:load
     />
     <h1 class="mt-5 font-extrabold text-3xl">{info.name}</h1>
     <p class="mt-10 text-justify md:max-w-2/3">{info.intro_text}</p>
@@ -57,25 +72,40 @@ const info = await loadInfoData();
       <h2 class="font-bold text-2xl text-fd-foreground" id="refer-to">
         Refer To
       </h2>
-      <div class="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
+
+      <ItemGroup class="grid grid-cols-1 mt-4 gap-4 sm:grid-cols-2">
         {referLinks.map((item) => (
-                        <a class="rounded-xl border p-4" href={item.url}>
-                            <h3 class="font-bold">{item.title}</h3>
-                            <p class="text-xs">{item.description}</p>
-                        </a>
-                    ))}
-      </div>
+        <Item variant="outline" as="a" href={item.url}>
+          <ItemMedia variant="icon">
+              <Icon name={item.icon} />
+          </ItemMedia>
+          <ItemContent class="text-start gap-0">
+            <ItemTitle class="line-clamp-1">
+              {item.title}
+            </ItemTitle>
+            <ItemDescription>{item.description}</ItemDescription>
+          </ItemContent>
+        </Item>
+        ))}
+      </ItemGroup>
     </div>
 
     <div class="mt-10 min-w-10/12 grid-cols-1 md:min-w-2/3">
       <h2 class="prose font-bold text-2xl text-fd-foreground" id="tech-stack">
         Tech Stack
       </h2>
-      <div class="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
+      <ItemGroup class="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
         {Object.entries(info.tech_stack).map(([category, items]) => (
-                        <TechStackCard category={category} items={items} />
+                <Item variant="outline" class="flex flex-col gap-2">
+                <ItemTitle class="font-bold">
+                    {category}
+                </ItemTitle>
+                <ItemDescription class="flex flex-wrap justify-center gap-3">
+                {items.map((tech) => <Icon name={tech.icon} size={20} />)}
+                </ItemDescription>
+                </Item>
                     ))}
-      </div>
+      </ItemGroup>
     </div>
   </div>
 </BaseLayout>
