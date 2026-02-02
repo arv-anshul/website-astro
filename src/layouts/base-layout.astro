@@ -51,3 +51,30 @@ const {
     <slot />
   </body>
 </html>
+
+<script is:inline>
+  function initTheme() {
+    const colorTheme = localStorage.getItem("colorTheme");
+    if (colorTheme) {
+      if (colorTheme === "dark") {
+        document.documentElement.classList.add("dark");
+      } else if (colorTheme === "light") {
+        document.documentElement.classList.remove("dark");
+      } else if (colorTheme === "system") {
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+        document.documentElement.classList.toggle("dark", prefersDark);
+      }
+    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("colorTheme", "dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("colorTheme", "light");
+    }
+  }
+
+  initTheme();
+  document.addEventListener("astro:after-swap", initTheme);
+</script>

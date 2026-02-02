@@ -26,6 +26,14 @@
     {
       "name": "button",
       "version": "2.3.0"
+    },
+    {
+      "name": "toggle",
+      "version": "1.0.1"
+    },
+    {
+      "name": "theme-toggle",
+      "version": "1.0.0"
     }
   ]
 }

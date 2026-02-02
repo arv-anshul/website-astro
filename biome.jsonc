@@ -5,13 +5,7 @@
     {
       "includes": ["src/components/starwind/**/*"],
       "linter": {
-        "rules": {
-          "style": {
-            "useFilenamingConvention": "off",
-            "noExportedImports": "off",
-            "noDescendingSpecificity": "off"
-          }
-        }
+        "enabled": false
       }
     }
   ]
