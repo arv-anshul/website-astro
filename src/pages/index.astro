@@ -84,6 +84,9 @@ const info = await loadInfoData();
             </ItemTitle>
             <ItemDescription>{item.description}</ItemDescription>
           </ItemContent>
+          <ItemContent>
+            <Icon name="lucide:arrow-right" size={18}/>
+          </ItemContent>
         </Item>
         ))}
       </ItemGroup>
@@ -95,7 +98,7 @@ const info = await loadInfoData();
       </h2>
       <ItemGroup class="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
         {Object.entries(info.tech_stack).map(([category, items]) => (
-                <Item variant="outline" class="flex flex-col gap-2">
+                <Item variant="outline" class="flex flex-col gap-3">
                 <ItemTitle class="font-bold">
                     {category}
                 </ItemTitle>

@@ -51,7 +51,7 @@ const { project, class: className, ...props } = Astro.props as Props;
     {project.description.length > 320 ? `${project.description.slice(0, 320)}...` : project.description}
   </CardContent>
 
-  <CardFooter class="flex-wrap justify-center gap-3">
+  <CardFooter class="flex-wrap justify-center gap-3 p-4 border-muted">
     {project.tech_icons.map((tag) => (
           <span class="inline-flex items-center justify-center">
               <Icon name={tag} size={18} />
