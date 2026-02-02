@@ -63,7 +63,6 @@ const info = await loadInfoData();
       class:list="w-60 rounded-full"
       inferSize={true}
       src={info.avatar_url}
-      client:load
     />
     <h1 class="mt-5 font-extrabold text-3xl">{info.name}</h1>
     <p class="mt-10 text-justify md:max-w-2/3">{info.intro_text}</p>
