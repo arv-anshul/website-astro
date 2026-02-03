@@ -14,20 +14,24 @@ const { sticky = false } = Astro.props;
 
 // Define your navigation links here
 const homeLink = {
-  href: "/",
+  href: "/v2",
   title: "ARV",
   src: "/favicon.svg",
   alt: "Om Logo",
 };
 
 const middleLinks = [
-  { href: "/projects", title: "Projects", icon: "lucide:rocket" },
-  { href: "/blog", title: "Blog", icon: "lucide:newspaper" },
+  { href: "/v2/projects", title: "Projects", icon: "lucide:rocket" },
+  { href: "/v2/blog", title: "Blog", icon: "lucide:newspaper" },
 ];
 
 const endLinks = [
-  { href: "/resume", title: "Resume", icon: "lucide:scroll-text" },
-  { href: "#", title: "GitHub", icon: "lucide:github" },
+  { href: "/v2/resume", title: "Resume", icon: "lucide:scroll-text" },
+  {
+    href: "https://github.com/arv-anshul",
+    title: "GitHub",
+    icon: "lucide:github",
+  },
 ];
 ---
 
