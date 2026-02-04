@@ -1,43 +1,21 @@
-# Astro Starter Kit: Minimal
+# ARV - Website
 
-```sh
-bun create astro@latest -- --template minimal
-```
+Made with Astro framework.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Features
 
-## 🚀 Project Structure
+1. Open Graph Image generation using [Takumi](https://takumi.kane.tw).
+2. Blog rendering from Markdown and MDX files.
+3. Load structured data from YAML/JSON files and render on web page.
+4. Uses [Starwind UI](https://starwind.dev) for customizable Astro components.
+5. Use [`pre-commit`](https://pre-commit.com) (with [`prek`](https://prek.j178.dev)) to format and lint code.
 
-Inside of your Astro project, you'll see the following folders and files:
+## Tech Stack
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `bun install`             | Installs dependencies                            |
-| `bun dev`             | Starts local dev server at `localhost:4321`      |
-| `bun build`           | Build your production site to `./dist/`          |
-| `bun preview`         | Preview your build locally, before deploying     |
-| `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `bun astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+| Usage | Tech/Tools |
+| --- | --- |
+| Framework and Language | ![Astro](https://img.shields.io/badge/Astro-BC52EE?logo=astro&logoColor=fff) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff) ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?logo=tailwindcss&logoColor=fff) ![Markdown](https://img.shields.io/badge/Markdown-000000?logo=markdown&logoColor=fff) ![MDX](https://img.shields.io/badge/MDX-1B1F24?logo=mdx&logoColor=fff) |
+| Development Tools | ![Bun](https://img.shields.io/badge/Bun-000000?logo=bun&logoColor=fff) ![Vite](https://img.shields.io/badge/Vite-9135FF?logo=vite&logoColor=fff) ![Biome](https://img.shields.io/badge/Biome-60A5FA?logo=biome&logoColor=fff) ![prek](https://img.shields.io/badge/prek-F54327?logo=prek&logoColor=fff) |
+| JS Libraries & Packages | ![Iconify](https://img.shields.io/badge/Iconify-026C9C?logo=iconify&logoColor=fff) ![Zod](https://img.shields.io/badge/Zod-408AFF?logo=zod&logoColor=fff) |
+| Development Environment | ![Zed Industries](https://img.shields.io/badge/Zed%20Industries-084CCF?logo=zedindustries&logoColor=fff) |
+| CI/CD | ![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?logo=githubactions&logoColor=fff) ![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222222?logo=githubpages&logoColor=fff) |
