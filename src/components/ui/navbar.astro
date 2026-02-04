@@ -16,7 +16,6 @@ const { sticky = false } = Astro.props;
 const homeLink = {
   href: "/v2",
   title: "ARV",
-  src: "/favicon.svg",
   alt: "Om Logo",
 };
 
@@ -61,12 +60,12 @@ const endLinks = [
       </div>
 
       <!-- Desktop Navigation -->
-      <nav class="hidden lg:block">
+      <nav class="mr-auto">
         <ul class="flex items-center">
           {middleLinks.map((link) => (
             <li>
               <a
-                class="flex items-center gap-x-2 px-3 py-2 font-medium text-foreground"
+                class="flex items-center gap-x-2 px-3 py-2 text-sm font-medium text-foreground"
                 href={link.href}
               >
                 <Icon name={link.icon} />
@@ -94,11 +93,12 @@ const endLinks = [
           <ThemeToggle size="sm" />
 
           <!-- Mobile Menu Button -->
+          <!-- TODO: Remove this toggling behavior for mobiles instead use one nav strip only -->
           <Button
             type="button"
             id="mobile-menu-button"
             aria-title="Open menu"
-            class="lg:hidden"
+            class="hidden"
             title="Open menu"
             variant="outline"
             size="icon"

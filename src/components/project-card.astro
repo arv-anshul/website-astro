@@ -30,7 +30,7 @@ const { project, class: className, ...props } = Astro.props as Props;
             {project.title} <Icon name="lucide:link" size={15} />
           </a> : project.title}
       </CardTitle>
-      <CardDescription class="text-sm">{project.completed_on}</CardDescription>
+      <CardDescription class="text-xs">{project.completed_on}</CardDescription>
     </div>
 
     <div class="flex gap-1">

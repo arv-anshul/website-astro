@@ -20,12 +20,6 @@ const referLinks = [
     icon: "lucide:rocket",
   },
   {
-    description: "Learn more about my experience.",
-    url: "/v2/",
-    title: "About",
-    icon: "lucide:user",
-  },
-  {
     description: "See my resume.",
     url: "/v2/resume",
     title: "Resume",
@@ -34,7 +28,7 @@ const referLinks = [
   {
     description: "Read my blogs.",
     url: "/v2/blog",
-    title: "Blogs",
+    title: "Blog",
     icon: "lucide:newspaper",
   },
   {
@@ -44,8 +38,14 @@ const referLinks = [
     icon: "lucide:user",
   },
   {
+    description: "Visit my LinkedIn profile.",
+    url: "https://linkedin.com/in/arv-anshul",
+    title: "LinkedIn",
+    icon: "simple-icons:linkedin",
+  },
+  {
     description: "See my GitHub profile.",
-    url: "/v2https://github.com/arv-anshul",
+    url: "https://github.com/arv-anshul",
     title: "GitHub",
     icon: "simple-icons:github",
   },
@@ -56,18 +56,20 @@ const info = await loadInfoData();
 
 <BaseLayout nav={{sticky: true}} title="Home - ARV">
   <div
-    class="mb-10 flex flex-1 flex-col items-center justify-center px-4 py-8 text-center"
+    class="mb-10 gap-10 flex flex-1 flex-col items-center justify-center px-4 py-8 text-center"
   >
-    <Image
-      alt="arv-anshul"
-      class:list="w-60 rounded-full"
-      inferSize={true}
-      src={info.avatar_url}
-    />
-    <h1 class="mt-5 font-extrabold text-3xl">{info.name}</h1>
-    <p class="mt-10 text-justify md:max-w-2/3">{info.intro_text}</p>
+    <div class="flex flex-col items-center gap-5">
+      <Image
+        alt="arv-anshul"
+        class="w-60 rounded-full"
+        inferSize
+        src={info.avatar_url}
+      />
+      <h1 class="font-extrabold text-3xl">{info.name}</h1>
+      <p class="text-justify md:max-w-2/3">{info.intro_text}</p>
+    </div>
 
-    <div class="mt-10 min-w-10/12 grid-cols-1 md:min-w-2/3">
+    <div class=" w-full md:w-2/3">
       <h2 class="font-bold text-2xl text-fd-foreground" id="refer-to">
         Refer To
       </h2>
@@ -75,14 +77,14 @@ const info = await loadInfoData();
       <ItemGroup class="grid grid-cols-1 mt-4 gap-4 sm:grid-cols-2">
         {referLinks.map((item) => (
         <Item variant="outline" as="a" href={item.url}>
-          <ItemMedia variant="icon">
+            <ItemMedia variant="icon" class="border-none">
               <Icon name={item.icon} />
           </ItemMedia>
           <ItemContent class="text-start gap-0">
             <ItemTitle class="line-clamp-1">
               {item.title}
             </ItemTitle>
-            <ItemDescription>{item.description}</ItemDescription>
+            <ItemDescription class="text-xs">{item.description}</ItemDescription>
           </ItemContent>
           <ItemContent>
             <Icon name="lucide:arrow-right" size={18}/>
@@ -92,10 +94,11 @@ const info = await loadInfoData();
       </ItemGroup>
     </div>
 
-    <div class="mt-10 min-w-10/12 grid-cols-1 md:min-w-2/3">
+    <div class="w-full md:w-2/3">
       <h2 class="prose font-bold text-2xl text-fd-foreground" id="tech-stack">
         Tech Stack
       </h2>
+
       <ItemGroup class="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
         {Object.entries(info.tech_stack).map(([category, items]) => (
                 <Item variant="outline" class="flex flex-col gap-3">
