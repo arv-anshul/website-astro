@@ -49,6 +49,12 @@ const {
           ...seo,
         }}
     />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="ARV's Blog RSS"
+      href={new URL("rss.xml", Astro.site)}
+    >
   </head>
   <body class:list={["relative w-full", className]} {...props}>
     <Navbar sticky={nav.sticky} />
