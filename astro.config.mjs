@@ -1,7 +1,6 @@
 // @ts-check
 
 import mdx from "@astrojs/mdx";
-import react from "@astrojs/react";
 import yaml from "@rollup/plugin-yaml";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
@@ -20,7 +19,6 @@ export default defineConfig({
     port: 3000,
   },
   integrations: [
-    react(),
     icon(),
     mdx({
       extendMarkdownConfig: false,
