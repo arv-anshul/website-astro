@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content";
+import { removeTrailingForwardSlash } from "@astrojs/internal-helpers/path";
 import type { HTMLAttributes } from "astro/types";
 import { Icon } from "astro-icon/components";
 
@@ -14,18 +15,13 @@ interface Props extends HTMLAttributes<"nav"> {
 
 const { pages, class: className } = Astro.props;
 
-// Normalize URLs for comparison (remove trailing slashes)
-const NORMALIZED_URL_REGEX = /\/$/;
-const removeTrailingSlash = (url: string) =>
-  url.replace(NORMALIZED_URL_REGEX, "");
-
 // Sort pages: index first, then by date (newest first) or title
 const sortedPages = [...pages].sort((a, b) => {
   // Index page always first
-  if (!removeTrailingSlash(a.id).includes("/")) {
+  if (!removeTrailingForwardSlash(a.id).includes("/")) {
     return -1;
   }
-  if (!removeTrailingSlash(b.id).includes("/")) {
+  if (!removeTrailingForwardSlash(b.id).includes("/")) {
     return 1;
   }
 
@@ -42,7 +38,7 @@ const sortedPages = [...pages].sort((a, b) => {
 <nav class={className}>
   <ul class="space-y-1" role="list">
     {sortedPages.map((page) => {
-      const isActive = removeTrailingSlash(Astro.url.pathname).endsWith(page.id);
+      const isActive = removeTrailingForwardSlash(Astro.url.pathname).endsWith(page.id);
 
       return (
         <li>
@@ -81,7 +77,7 @@ const sortedPages = [...pages].sort((a, b) => {
                     {page.data.title}
                   </span>
 
-                  {!removeTrailingSlash(page.id).includes("/") && (
+                  {!removeTrailingForwardSlash(page.id).includes("/") && (
                     <span class="inline-flex items-center rounded-md bg-muted/10 px-2 py-0.5 text-xs font-medium text-primary ring-1 ring-inset ring-primary/20">
                       Index
                     </span>

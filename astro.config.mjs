@@ -16,7 +16,6 @@ import remarkSmartypants from "remark-smartypants";
 export default defineConfig({
   site: "https://arv-anshul.github.io",
   base: "/v2",
-  trailingSlash: "always",
   server: {
     port: 3000,
   },
