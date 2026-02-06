@@ -3,6 +3,7 @@ import "@/styles/global.css";
 import type { HTMLAttributes } from "astro/types";
 import { SEO, type SEOProps } from "astro-seo";
 import Navbar from "@/components/ui/navbar.astro";
+import themeInit from "@/scripts/theme-init.js?raw";
 
 interface Props extends HTMLAttributes<"body"> {
   title: string;
@@ -55,36 +56,10 @@ const {
       title="ARV's Blog RSS"
       href={new URL("rss.xml", Astro.site)}
     >
+    <script is:inline set:html={themeInit} />
   </head>
   <body class:list={["relative w-full", className]} {...props}>
     <Navbar sticky={nav.sticky} />
     <slot />
   </body>
 </html>
-
-<script is:inline>
-  function initTheme() {
-    const colorTheme = localStorage.getItem("colorTheme");
-    if (colorTheme) {
-      if (colorTheme === "dark") {
-        document.documentElement.classList.add("dark");
-      } else if (colorTheme === "light") {
-        document.documentElement.classList.remove("dark");
-      } else if (colorTheme === "system") {
-        const prefersDark = window.matchMedia(
-          "(prefers-color-scheme: dark)"
-        ).matches;
-        document.documentElement.classList.toggle("dark", prefersDark);
-      }
-    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("colorTheme", "dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("colorTheme", "light");
-    }
-  }
-
-  initTheme();
-  document.addEventListener("astro:after-swap", initTheme);
-</script>
