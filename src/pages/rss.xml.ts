@@ -1,11 +1,20 @@
 import { getCollection } from "astro:content";
 import rss, { type RSSOptions } from "@astrojs/rss";
+import Shiki from "@shikijs/markdown-it";
 import MarkdownIt from "markdown-it";
 import sanitizeHtml from "sanitize-html";
 
 export async function GET(context: RSSOptions) {
   const blog = await getCollection("blog");
   const parser = new MarkdownIt();
+  parser.use(
+    await Shiki({
+      themes: {
+        light: "light-plus",
+        dark: "dark-plus",
+      },
+    })
+  );
 
   return rss({
     title: "ARV's Blog",
