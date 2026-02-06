@@ -12,10 +12,16 @@ import {
 import Item from "./starwind/item/Item.astro";
 
 interface Props extends HTMLAttributes<"section"> {
-  frontmatter: InferEntrySchema<"blog">;
+  frontmatter: InferEntrySchema<"blog" | "projects">;
+  backPageUrl?: string;
 }
 
-const { frontmatter, class: className, ...props } = Astro.props as Props;
+const {
+  frontmatter,
+  backPageUrl,
+  class: className,
+  ...props
+} = Astro.props as Props;
 ---
 
 <Item
@@ -51,7 +57,7 @@ const { frontmatter, class: className, ...props } = Astro.props as Props;
     <p>{frontmatter.description}</p>
   </ItemDescription>
 
-  <Button variant="ghost" size="sm" href="/v2/blog">
+  {backPageUrl && <Button variant="ghost" size="sm" href={backPageUrl}>
     <Icon name="lucide:arrow-left" size={20} /> Back
-  </Button>
+  </Button>}
 </Item>

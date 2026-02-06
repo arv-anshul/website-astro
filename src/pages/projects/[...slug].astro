@@ -6,13 +6,14 @@ import {
   render,
 } from "astro:content";
 import type { GetStaticPaths } from "astro";
+import FrontmatterCard from "@/components/frontmatter-card.astro";
 import NestedPagesList from "@/components/nested-pages-list.astro";
 import Prose from "@/components/starwind/prose";
 import BaseLayout from "@/layouts/base-layout.astro";
 
 interface Props {
   project: CollectionEntry<"projects">;
-  nestedPages: {
+  nestedPages?: {
     id: string;
     data: InferEntrySchema<"projects">;
   }[];
@@ -21,24 +22,19 @@ interface Props {
 export const getStaticPaths = (async () => {
   const projects = await getCollection("projects");
 
-  // Filter nested pages
-  const nestedPages = projects
-    .filter((project) => {
-      const base = project.id.split("/")[0];
-      if (project.id === base) {
-        return true;
-      }
-      if (project.id.includes("/") && project.id.startsWith(base)) {
-        return true;
-      }
-      return false;
-    })
-    .map((p) => ({ id: p.id, data: p.data }));
+  return projects.map((project) => {
+    const children = projects.filter((p) => {
+      return p.id.startsWith(project.id.split("/")[0]);
+    });
 
-  return projects.map((project) => ({
-    params: { slug: project.id },
-    props: { project, nestedPages },
-  }));
+    return {
+      params: { slug: project.id },
+      props: {
+        project,
+        nestedPages: children.length > 1 ? children : undefined, // Only contains the sub-pages for a specific project
+      },
+    };
+  });
 }) satisfies GetStaticPaths;
 
 const { project, nestedPages } = Astro.props as Props;
@@ -52,13 +48,14 @@ const { Content } = await render(project);
   <div
     class="flex flex-col flex-1 mx-auto md:max-w-3/5 items-center justify-center px-4 py-8"
   >
-    <div>
-      <p class="text-bold text-2xl text-center mb-4">Related Pages</p>
+    <FrontmatterCard frontmatter={project.data} backPageUrl="/v2/projects" />
+    {nestedPages && <div>
+      <p class="text-bold text-2xl text-center my-4">Related Pages</p>
       <NestedPagesList
         pages={nestedPages}
         class="border rounded border-outline p-4"
       />
-    </div>
+    </div>}
 
     <article class="mt-10 w-full md:max-w-11/12">
       <Prose class="max-w-auto w-full">
