@@ -8,15 +8,12 @@ icon: mdi:family-tree
 
 > From CampusX Trail Session
 
-Tree based models and Regression models are widely used [Machine Learning] models. So more you know about them is better
-for you. Also, many concepts from these models are borrowed by advance [Machine Learning] models like Gradient Boosting,
+Tree based models and Regression models are widely used Machine Learning models. So more you know about them is better
+for you. Also, many concepts from these models are borrowed by advance Machine Learning models like Gradient Boosting,
 XGBoost, etc.
 
-These models are also great choice for :fontawesome-user-tie: interviewers so from these models they ask many
-[interview questions]. This blog mainly focuses on tree based models.
-
-[Machine Learning]: ../../c/ml.md
-[interview questions]: ../../c/interview-questions.md
+These models are also great choice for :fontawesome-user-tie: interviewers so from these models they ask many interview
+questions. This blog mainly focuses on tree based models.
 
 | Aspect              | Decision Trees                                                                                                                                   | Regression Models                                                                     |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------- |
@@ -190,8 +187,8 @@ the following class.
 
 ## Similar Blogs
 
-- [:material-graph-outline: Decision Tree](decision_tree.md)
-- [:material-chart-scatter-plot: Regression Interview Questions](regression-interview-quesitons.md)
-- [:adhesive_bandage: Regularization in ML](regularization-in-ml.md)
+- [:material-graph-outline: Decision Tree](./decision-tree)
+- [:material-chart-scatter-plot: Regression Interview Questions](./regression-interview-quesitons)
+- [:adhesive_bandage: Regularization in ML](./regularization-in-ml)
 
 [outliers]: outlier-univariate.md
