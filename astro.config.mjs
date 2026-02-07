@@ -13,6 +13,7 @@ import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
 import remarkGithubAlerts from "remark-github-alerts";
 import remarkMath from "remark-math";
+import syncContentAssets from "./src/integrations/sync-content-assets";
 
 // https://astro.build/config
 export default defineConfig({
@@ -21,7 +22,7 @@ export default defineConfig({
   server: {
     port: 3000,
   },
-  integrations: [icon(), mdx()],
+  integrations: [icon(), mdx(), syncContentAssets()],
   vite: {
     plugins: [tailwindcss(), yaml()],
   },
