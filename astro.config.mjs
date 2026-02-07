@@ -7,10 +7,12 @@ import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
 import icon from "astro-icon";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import rehypeKatex from "rehype-katex";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
 import remarkGithubAlerts from "remark-github-alerts";
+import remarkMath from "remark-math";
 
 // https://astro.build/config
 export default defineConfig({
@@ -30,9 +32,14 @@ export default defineConfig({
   },
   markdown: {
     syntaxHighlight: false,
-    remarkPlugins: [[remarkGfm, { singleTilde: false }], remarkGithubAlerts],
+    remarkPlugins: [
+      [remarkGfm, { singleTilde: false }],
+      remarkGithubAlerts,
+      remarkMath,
+    ],
     rehypePlugins: [
       rehypeSlug,
+      rehypeKatex,
       rehypeAutolinkHeadings,
       [
         rehypePrettyCode,
