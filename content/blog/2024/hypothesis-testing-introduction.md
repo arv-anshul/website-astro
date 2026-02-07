@@ -62,9 +62,7 @@ the average score of students using the traditional method `#!math (H_a:\mu_{\te
 
 ### Hypothesis Example (Using ChatGPT)
 
-<p align="center" style="font-size: 0.8rem;">
-:question:{ .lg .middle .bounce } **Does a New Drug Reduce Blood Pressure?**
-</p>
+> **Does a New Drug Reduce Blood Pressure?**
 
 In this example, we'll demonstrate hypothesis testing using a hypothetical scenario where a pharmaceutical company has
 developed a new drug intended to reduce blood pressure in patients with hypertension. We'll design and conduct a

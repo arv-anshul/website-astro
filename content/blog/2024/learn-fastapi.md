@@ -10,17 +10,21 @@ _A better framework than Flask_. Get production-ready code and API. With automat
 (and fully compatible with) the open standards for APIs: [OpenAPI](https://github.com/OAI/OpenAPI-Specification)
 (previously known as Swagger) and [JSON Schema](https://json-schema.org/).
 
-### Features
+## Features
 
 1. **Automatic docs:** Generate documentation for your API automatically.
    - **Swagger UI:** Interactive exploration, call and test your API directly from the browser.
+
    ```sh
    http://localhost:8000/docs
    ```
+
    - **Redoc:** Read only documentation. You can also download this doc.
+
    ```sh
    http://localhost:8000/redoc
    ```
+
 2. **Response Validation:** Use [pydantic](https://pydantic-docs.helpmanual.io/) `BaseModel` as TypeHint in Python which
    automatically validate your responses.
 3. **Starlette Features:** `FastAPI` is actually a sub-class of `Starlette`.With **FastAPI** you get all of
@@ -37,7 +41,7 @@ _A better framework than Flask_. Get production-ready code and API. With automat
    - 100% type annotated codebase.
 4. Supports Asynchronous programming.
 
-#### Important Links To Learn FastAPI
+### Important Links To Learn FastAPI
 
 **FastAPI Tutorials**
 
@@ -74,7 +78,7 @@ _A better framework than Flask_. Get production-ready code and API. With automat
 - There are many other advance concepts in API world and some of them are Middleware, Dependency Injection, CORS, etc.
   For that see the [FastAPI docs](https://fastapi.tiangolo.com/tutorial/).
 
-#### Extra Links around FastAPI
+### Extra Links around FastAPI
 
 - [What are the best practices for structuring a FastAPI project? - Stack Overflow](https://stackoverflow.com/questions/64943693/what-are-the-best-practices-for-structuring-a-fastapi-project)
 - [Advanced User Guide - FastAPI](https://fastapi.tiangolo.com/advanced/)

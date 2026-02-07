@@ -25,7 +25,7 @@ categories: [project, frontend]
 
 - Followed [only one YouTube video](https://youtu.be/VeNfHj6MhgA) to learn :simple-vuedotjs: VueJs.
 - Used [shadcn/vue](https://shadcn-vue.com) as components library. _Just followed the docs._
-- Whole [`build_frontend.yaml`]() Github Action workflow written by ChatGPT, isn't it amazing :exploding_head:.
+- Whole `build_frontend.yaml` Github Action workflow written by ChatGPT, isn't it amazing :exploding_head:.
 
 Although, I didn't have much knowledge of Vue, Vite and ShadCN like frameworks/tools but their documentation and ChatGPT
 helped me so much that I am able to **learn, build, diagnose and deploy** the frontend in almost 2-3 days.

@@ -31,7 +31,7 @@ that we have used
 
 ## Model Building Steps
 
-- **Comment Vectorization** <sup class="secondary">\[text-to-vec\]</sup>
+- **Comment Vectorization**
   - Before transforming performed some basic preprocessing steps on comments like lowercasing, lemmetization and
     stemming to make vectors more consistent.
   - Evaluated multiple vectorization methods like BOW and TF-IDF.

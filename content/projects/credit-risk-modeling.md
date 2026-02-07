@@ -186,7 +186,7 @@ This column indicates that 73.1% of people who are applying for the loan are mar
 
 The Graduate and 12th pass population contribute significantly to the dataset
 
-### Gender Distribution Graph:
+### Gender Distribution Graph
 
 ![alt](https://github.com/arv-anshul/notebooks/raw/main/credit-modeling/assets/img/plot-GENDER.png)
 

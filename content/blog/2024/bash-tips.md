@@ -54,8 +54,8 @@ Hello world!
 ```
 
 ```bash
-$ mkdir new-project
-$ code !$  # Opens the `new-project folder in VSCode
+mkdir new-project
+code !$  # Opens the `new-project folder in VSCode
 ```
 
 ### Shortcut: <kbd>ctrl</kbd> + <kbd>\</Kbd>

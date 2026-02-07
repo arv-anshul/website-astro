@@ -14,7 +14,7 @@ categories: [project, architecture, ml]
 <details>
 <summary>Code for Diagram</summary>
 
-```
+```text
 styleMode plain
 
 Container 1 [icon: docker, color: blue] {
@@ -94,7 +94,7 @@ sequenceDiagram
 <details>
 <summary>Code for Diagram</summary>
 
-```
+```text
 styleMode plain
 
 Frontend [icon: streamlit, color: red]
@@ -132,7 +132,7 @@ deactivate API
 <details>
 <summary>Code for Diagram</summary>
 
-```
+```text
 direction right
 styleMode plain
 
@@ -168,7 +168,7 @@ prediction > user
 <details>
 <summary>Code for Diagram</summary>
 
-```
+```text
 styleMode plain
 
 watchHistory [icon: user, color: blue] {

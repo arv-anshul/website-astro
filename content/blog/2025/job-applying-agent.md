@@ -97,5 +97,5 @@ requirements.
 
 ## Resourses
 
-- https://towardsdatascience.com/ai-powered-information-extraction-and-matchmaking-0408c93ec1b9
-- https://github.com/luillyfe/resume-insights
+- <https://towardsdatascience.com/ai-powered-information-extraction-and-matchmaking-0408c93ec1b9>
+- <https://github.com/luillyfe/resume-insights>

@@ -10,7 +10,7 @@ Docker is a platform designed to simplify the process of creating, deploying, an
 containers. Containers enable developers to package an application with all its dependencies into a standardized unit
 for seamless deployment across different environments.
 
-### :hammer_and_wrench: Components of Docker
+## :hammer_and_wrench: Components of Docker
 
 1. [Dockerfile](#dockerfile)
 2. [.dockerignore](#dockerignore)
@@ -82,7 +82,7 @@ docker build -t my_python_container .
 docker run -it my_python_container
 ```
 
-### Importance and Benefits:
+### Importance and Benefits
 
 - **Portability:** Dockerfiles enable developers to create consistent environments, ensuring that applications run
   identically across various systems and environments.
@@ -113,13 +113,15 @@ docker run -it my_python_container
 
 ## `docker`
 
-#### 1. `docker run`
+### 1. `docker run`
 
 - **Description:** Starts a new container from an image.
 - **Example:**
+
   ```bash
   docker run -it --name my_container ubuntu:latest
   ```
+
   - `-it`: Starts an interactive terminal within the container.
   - `--name my_container`: Names the container as "my_container".
   - `ubuntu:latest`: Specifies the image to use (latest Ubuntu image).
@@ -128,27 +130,33 @@ docker run -it my_python_container
 
 - **Description:** Lists running containers.
 - **Example:**
+
   ```bash
   docker ps
   ```
+
   This command shows the containers' IDs, names, status, ports, and images.
 
 #### 3. `docker images`
 
 - **Description:** Lists available images.
 - **Example:**
+
   ```bash
   docker images
   ```
+
   Displays a list of all downloaded Docker images along with their tags and sizes.
 
 #### 4. `docker build`
 
 - **Description:** Builds an image from a Dockerfile.
 - **Example:**
+
   ```bash
   docker build -t my_image:latest .
   ```
+
   - `-t my_image:latest`: Tags the image as "my_image" with the "latest" tag.
   - `.`: Specifies the build context (current directory) containing the Dockerfile.
 
@@ -156,54 +164,66 @@ docker run -it my_python_container
 
 - **Description:** Stops a running container.
 - **Example:**
+
   ```bash
   docker stop my_container
   ```
+
   Stops the container named "my_container".
 
 #### 6. `docker start`
 
 - **Description:** Starts a stopped container.
 - **Example:**
+
   ```bash
   docker start my_container
   ```
+
   Starts the container named "my_container" that was stopped.
 
 #### 7. `docker rm`
 
 - **Description:** Removes one or more containers.
 - **Example:**
+
   ```bash
   docker rm my_container
   ```
+
   Deletes the container named "my_container".
 
 #### 8. `docker rmi`
 
 - **Description:** Removes one or more images.
 - **Example:**
+
   ```bash
   docker rmi my_image:latest
   ```
+
   Removes the image "my_image" with the "latest" tag.
 
 #### 9. `docker exec`
 
 - **Description:** Executes a command within a running container.
 - **Example:**
+
   ```bash
   docker exec -it my_container bash
   ```
+
   Executes the Bash shell (`bash`) in the running container named "my_container" interactively (`-it`).
 
 #### 10. `docker logs`
 
 - **Description:** Retrieves logs from a container.
 - **Example:**
+
   ```bash
   docker logs my_container
   ```
+
   Fetches the logs of the container named "my_container".
 
 These commands form the core of Docker usage for managing containers, images, building, starting/stopping containers,

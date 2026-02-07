@@ -12,9 +12,9 @@ performing EDA on your dataset.
 ![image for eda - realpython](https://realpython.com/cdn-cgi/image/width=1920,format=auto/https://files.realpython.com/media/Showcase-Polars_Watermarked.4e25d4f6c9a7.jpg)
 
 > I will generally use [`polars`](https://pola.rs) library in this article.
-
+>
 > For plotting I'll generally use [`seaborn`](https://seaborn.pydata.org/) library.
-
+>
 > First perform univariate analysis without any column dropping, after that perform BiVariate analysis and then decide
 > whether to drop a feature or not. Also, provide a argument which proofs that your dropping decision is right.
 

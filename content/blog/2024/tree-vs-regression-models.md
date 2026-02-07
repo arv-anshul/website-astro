@@ -18,16 +18,16 @@ These models are also great choice for :fontawesome-user-tie: interviewers so fr
 [Machine Learning]: ../../c/ml.md
 [interview questions]: ../../c/interview-questions.md
 
-| :simple-perplexity:{ .light } Aspect | Decision Trees &nbsp;:octicons-info-16:{ .bounce title="Decision Trees does not represent all tree based models" }                               | Regression Models                                                                     |
-| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------- |
-| Type                                 | Can be used for classification and regression                                                                                                    | Used for predictive modeling, predicting continuous values                            |
-| Decision Boundaries                  | Bisect the space into smaller regions, fitting lines to divide the space exactly                                                                 | Focuses on predicting outcomes based on previous data or trends                       |
-| Interpretability                     | Easy to understand and interpret due to their flowchart-like structure                                                                           | Interpretability varies based on the complexity of the model                          |
-| Advantages                           | Easy to interpret, visualize, and require minimal data preparation                                                                               | Effective in predicting continuous values based on historical data                    |
-| Disadvantages                        | Prone to overfitting noisy data, especially with deeper trees                                                                                    | May struggle with capturing complex relationships in the data                         |
-| How They Work                        | Split the dataset based on data homogeneity, using measures like entropy for classification trees and Sum of Squared Errors for regression trees | Focuses on fitting a curve or surface to the data points to predict continuous values |
+| Aspect              | Decision Trees                                                                                                                                   | Regression Models                                                                     |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------- |
+| Type                | Can be used for classification and regression                                                                                                    | Used for predictive modeling, predicting continuous values                            |
+| Decision Boundaries | Bisect the space into smaller regions, fitting lines to divide the space exactly                                                                 | Focuses on predicting outcomes based on previous data or trends                       |
+| Interpretability    | Easy to understand and interpret due to their flowchart-like structure                                                                           | Interpretability varies based on the complexity of the model                          |
+| Advantages          | Easy to interpret, visualize, and require minimal data preparation                                                                               | Effective in predicting continuous values based on historical data                    |
+| Disadvantages       | Prone to overfitting noisy data, especially with deeper trees                                                                                    | May struggle with capturing complex relationships in the data                         |
+| How They Work       | Split the dataset based on data homogeneity, using measures like entropy for classification trees and Sum of Squared Errors for regression trees | Focuses on fitting a curve or surface to the data points to predict continuous values |
 
-## 1. What are the main differences between tree based models and regression models?
+## 1. What Are the Main Differences Between Tree Based Models and Regression Models?
 
 | Aspect                       | Tree Based Models                                                                                                                                                                                   | Linear Models                                                                                                                                                                                                                                                         |
 | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -35,10 +35,10 @@ These models are also great choice for :fontawesome-user-tie: interviewers so fr
 | **Non-Linearity**            | Tree models can handle both linear and non-linear data.                                                                                                                                             | Regression models performs better with linearly separable data but it fails to capture the essence of non-linear data.                                                                                                                                                |
 | **Computational Complexity** | Tree models are more complex than linear models, especially training complexity of Ensemble techniques as it finds optimal solution iteratively.                                                    | Regression models has an upper edge here because it requires find the optimal co-efficient which minimizes the loss function and for that it uses Gradient Descent techniques.                                                                                        |
 | **Effects of Outliers**      | Tree models are generally robust to [outliers] because they creates multiple decision boundaries which separates the outliers easily and model doesn't affect much from it.                         | Regression models are highly sensitive to [outliers] because when the data has outliers the best fit line will try to fit the outliers values to reduce the loss function. ^^To reduce this sensitivity we have [Regularization](regularization-in-ml.md) concepts^^. |
-| **Handling Null Values**     | Some tree based algorithms/models can handle null values like **XGBoost**.                                                                                                                          | Linear model can't handle null values at all :thinking:{ title="In my knowledge" }. Preprocess the data before training linear models.                                                                                                                                |
+| **Handling Null Values**     | Some tree based algorithms/models can handle null values like **XGBoost**.                                                                                                                          | Linear model can't handle null values at all. Preprocess the data before training linear models.                                                                                                                                                                      |
 | **Interpretable**            | Only Decision Trees are interpretable but libraries like [SHAP](https://shap.readthedocs.io/en/latest/) can explain ensemble tree models. ^^RandomForest can be used to calc features importance.^^ | Linear models are very interpretable because it calculates the features co-efficient with target feature.                                                                                                                                                             |
 
-## 2. Can you describe a real-world application where you would prefer to use a RandomForest over a logistic regression model?
+## 2. Can You Describe a Real-World Application Where You Would Prefer to Use a RandomForest over a Logistic Regression Model?
 
 We can preffer RandomForest over Logistic Regression in the many scenarios like:
 
@@ -53,7 +53,7 @@ We can preffer RandomForest over Logistic Regression in the many scenarios like:
    [`h2o`](https://docs.h2o.ai/h2o/latest-stable/h2o-py/docs/modeling.html#h2orandomforestestimator) which can handle
    null values too.
 
-## 3. What is the impact of outliers on Decision Tree?
+## 3. What Is the Impact of Outliers on Decision Tree?
 
 Decision Trees can handle Outliers easily because it segregate them using decision boundaries in the initial steps.
 However, if the Decision Tree becomes overfitted to a training dataset, it can become more sensitive to outliers,
@@ -63,45 +63,31 @@ Mainly outliers can affect Decision Trees while working with regression problems
 outliers are present/classified/calculated). Prediction of model is affected in those leaf-nodes where outliers are
 calculated (this is proven) but this is not the case in classification problems.
 
-## 4. What is the role of pruning in Decision Tree, what is Post-Pruning and Pre-Pruning? :simple-perplexity:{ .secondary }
+## 4. What Is the Role of Pruning in Decision Tree, What Is post-Pruning and pre-Pruning?
 
-<div class="grid cards" markdown>
+### Role of Pruning in Decision Trees
 
-- :octicons-telescope-fill-24:&nbsp; **Role of Pruning in Decision Trees**
+1. Pruning in Decision Trees is crucial to prevent overfitting and enhance the model's ability to generalize by
+   simplifying the tree structure.
+1. It involves removing parts of the tree that do not contribute significantly to predictive power, making the model
+   more interpretable and effective.
 
-  ---
+### Pre-Pruning
 
-  1. Pruning in Decision Trees is crucial to prevent overfitting and enhance the model's ability to generalize by
-     simplifying the tree structure.
-  2. It involves removing parts of the tree that do not contribute significantly to predictive power, making the model
-     more interpretable and effective.
+1. Pre-pruning involves stopping the tree's growth before it fits the entire training set.
+2. It focuses on setting hyperparameters to control the tree's size during construction, preventing overfitting by
+   limiting its complexity.
 
-</div>
+### Post-Pruning
 
-<div class="grid cards" markdown>
+1. Post-pruning allows the tree to grow fully and then removes nodes that do not add substantial predictive power.
+2. Techniques like cost-complexity pruning are commonly used in post-pruning to simplify the tree by selecting the
+   subtree with the smallest cost based on a complexity parameter and the number of leaf nodes.
 
-- :octicons-telescope-fill-24:&nbsp; **Pre-Pruning**
-
-  ---
-
-  1. Pre-pruning involves stopping the tree's growth before it fits the entire training set.
-  2. It focuses on setting hyperparameters to control the tree's size during construction, preventing overfitting by
-     limiting its complexity.
-
-- :octicons-telescope-fill-24:&nbsp; **Post-Pruning** :no_good:{ title="Not widely used" }
-
-  ---
-
-  1. Post-pruning allows the tree to grow fully and then removes nodes that do not add substantial predictive power.
-  2. Techniques like cost-complexity pruning are commonly used in post-pruning to simplify the tree by selecting the
-     subtree with the smallest cost based on a complexity parameter and the number of leaf nodes.
-
-</div>
-
-!!! summary
-
-    1. **Pre-pruning**: Penalize (by cutting the nodes) the model while training.
-    2. **Post-pruning**: First fully train the model then after penalize the model by cutting down the nodes.
+> [!NOTE]
+>
+> 1. **Pre-pruning**: Penalize (by cutting the nodes) the model while training.
+> 2. **Post-pruning**: First fully train the model then after penalize the model by cutting down the nodes.
 
 ### Cost Complexity Function in Decision Tree
 
@@ -110,19 +96,19 @@ tradeoff between error (cost) and tree size (complexity) to find an optimal tree
 as `#!math R_{c_p}(T)`, is the sum of its risk (error) and a "cost complexity" factor `#!math c_p` multiplied by the
 tree size `#!math T`. This function is used in cost complexity pruning to minimize the cross-validated prediction error
 and prevent overfitting. By adjusting the cost complexity parameter `#!math c_p`, decision trees can be pruned
-effectively to improve generalization to test data. :simple-perplexity:{ .secondary }
+effectively to improve generalization to test data.
 
 :simple-scikitlearn:{ .scikitlearn }
 [`plot_cost_complexity_pruning`](https://scikit-learn.org/stable/auto_examples/tree/plot_cost_complexity_pruning.html)
 
-## 5. How missing values are handled in tree based algorithms like XGBoost?
+## 5. How Missing Values Are Handled in Tree Based Algorithms like XGBoost?
 
 > XGBoost only handle missing values present in Input features. It doesn't handle null values present in Output/Target
 > feature. You have to preprocess or remove the null values of Output feature.
 
 :x: Not completed!
 
-## 6. What is the difference between ID3, C4.5, and CART algorithms? :simple-perplexity:{ .secondary }
+## 6. What Is the Difference Between ID3, C4.5, and CART Algorithms?
 
 | Algorithm                          | ID3                                   | C4.5                                       | CART                                                                             |
 | ---------------------------------- | ------------------------------------- | ------------------------------------------ | -------------------------------------------------------------------------------- |
@@ -132,7 +118,7 @@ effectively to improve generalization to test data. :simple-perplexity:{ .second
 | **Pruning**                        | Does not handle pruning               | Prunes trees to avoid overfitting          | Prunes trees using a complex model with parameters estimated by cross-validation |
 | **Binary Tests**                   | Always binary tests                   | Allows two or more outcomes                | Binary tests                                                                     |
 
-## 7. How would you approach a situation where your tree-based model is overfitting? :simple-scikitlearn:{ .secondary }
+## 7. How Would You Approach a Situation Where Your Tree-Based Model Is Overfitting?
 
 I can apply pruning techniques which penalize the model if it tries to overfit while training. We have many
 hyperparameters in DecisionTree, RandomForest classes apply pre-pruning on models.
@@ -159,7 +145,7 @@ hyperparameters in DecisionTree, RandomForest classes apply pre-pruning on model
 [`sklearn.tree.DecisionTreeClassifier`](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier){
 title="scikit-learn documentation" }
 
-## 8. :mountain_snow:{ title="Advance concept" } Discuss the role of shrinkage (learning rate) in boosting algorithms. How does it contribute to model performance and robustness? :simple-perplexity:{ .secondary }
+## 8. Discuss the Role of Shrinkage (Learning Rate) in Boosting Algorithms. How Does It Contribute to Model Performance and Robustness?
 
 - The learning rate, also known as shrinkage, plays a crucial role in boosting algorithms by determining how fast or
   slow a model updates its weights based on the gradient of the loss function.
@@ -176,7 +162,7 @@ title="scikit-learn documentation" }
 
 > This question comes under Boosting algorithms which is advance topic.
 
-## 9. Discuss the computational complexity of training a Decision Tree and how it scales with the size of the dataset. :simple-perplexity:{ .secondary }
+## 9. Discuss the Computational Complexity of Training a Decision Tree and How It Scales with the Size of the Dataset.
 
 - The computational complexity of training a Decision Tree is influenced by the size of the dataset and the number of
   dimensions in the feature space.
@@ -186,30 +172,26 @@ title="scikit-learn documentation" }
   improving efficiency in machine learning tasks, especially when dealing with large datasets and high-dimensional
   feature spaces.
 
-## 10. How do tree-based algorithms handle imbalanced datasets, and what are the implications for model performance and interpretation?
+## 10. How Do Tree-Based Algorithms Handle Imbalanced Datasets, and What Are the Implications for Model Performance and Interpretation?
 
 There is a hyperparameter in DecisionTree class called `class_weigth` where you can assign weights to each class label
-or you can provide `#!py "balanced"` which will automatically assign weights to each class labels.
+or you can provide `"balanced"` which will automatically assign weights to each class labels.
 
-### How do you manually assign weights?
+### How Do You Manually Assign Weights?
 
 It depends on your domain knowledge or you can use hit & try method.
 
-### How do `#!py "balanced"` value assign weights?
+### How Do `"balanced"` Value Assign Weights?
 
 It assigns `#!math \frac{1}{n}` weight value to each class labels where `#!math n` is the count of data points present
 the following class.
 
 ---
 
-<p align="center" markdown>**Similar blogs**{ .success }</p>
+## Similar Blogs
 
-<p align="center" markdown>
-
-[:material-graph-outline: Decision Tree](decision_tree.md){ .md-button .slim-button}
-[:material-chart-scatter-plot: Regression Interview Questions](regression-interview-quesitons.md){ .md-button
-.slim-button} [:adhesive_bandage: Regularization in ML](regularization-in-ml.md){ .md-button .slim-button}
-
-</p>
+- [:material-graph-outline: Decision Tree](decision_tree.md)
+- [:material-chart-scatter-plot: Regression Interview Questions](regression-interview-quesitons.md)
+- [:adhesive_bandage: Regularization in ML](regularization-in-ml.md)
 
 [outliers]: outlier-univariate.md

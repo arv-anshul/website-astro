@@ -8,7 +8,7 @@ icon: mdi:keyboard
 
 ## Bash
 
-### Display ANSI Colors with Their Color-Code.
+### Display ANSI Colors with Their Color-Code
 
 ```bash
 function colormap() {
@@ -26,14 +26,14 @@ function colormap() {
 > The `colormap` function will print the ANSI colors with codes in your terminal.
 
 ```bash
-$ colormap           # (000 - 255)
-$ colormap 200       # (200 - 255)
-$ colormap 100 120   # (100 - 120)
+colormap           # (000 - 255)
+colormap 200       # (200 - 255)
+colormap 100 120   # (100 - 120)
 ```
 
 ## Docker
 
-### Clear All Caches, Images, Containers, Volumes of Docker.
+### Clear All Caches, Images, Containers, Volumes of Docker
 
 ```bash
 docker system prune -a --volumes --force
