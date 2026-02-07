@@ -25,7 +25,7 @@ export const getStaticPaths = (async () => {
   });
 }) satisfies GetStaticPaths;
 
-const { post } = Astro.props;
+const { post } = Astro.props as Props;
 const { Content } = await render(post);
 ---
 
@@ -48,7 +48,7 @@ const { Content } = await render(post);
   <div
     class="flex flex-col flex-1 mx-auto md:max-w-3/5 items-center justify-center px-4 py-8"
   >
-    <FrontmatterCard frontmatter={post.data} backPageUrl="/v2/blog" />
+    <FrontmatterCard data={post.data} backPageUrl="/v2/blog" />
     <article class="mt-10 w-full md:max-w-11/12">
       <Prose class="max-w-auto w-full">
         <Content />

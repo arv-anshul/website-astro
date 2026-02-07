@@ -52,7 +52,7 @@ const { Content } = await render(project);
   <div
     class="flex flex-col flex-1 mx-auto md:max-w-3/5 items-center justify-center px-4 py-8"
   >
-    <FrontmatterCard frontmatter={project.data} backPageUrl="/v2/projects" />
+    <FrontmatterCard data={project.data} backPageUrl="/v2/projects" />
     {nestedPages && <div>
       <p class="text-bold text-2xl text-center my-4">Related Pages</p>
       <NestedPagesList
