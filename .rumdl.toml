@@ -20,5 +20,6 @@ disable = [
 allowed-elements = ["br", "details", "summary", "figure", "figcaption", "iframe", "kbd", "a", "img"]
 
 [MD013]
+reflow = true
 code-blocks = false
 headings = false

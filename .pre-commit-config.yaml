@@ -8,6 +8,12 @@ repos:
       - id: check-json
       - id: check-added-large-files
 
+  - repo: https://github.com/rvben/rumdl-pre-commit
+    rev: v0.0.222
+    hooks:
+      - id: rumdl
+      - id: rumdl-fmt
+
   - repo: local
     hooks:
       - id: ultracite
