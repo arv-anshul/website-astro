@@ -6,6 +6,7 @@ import yaml from "@rollup/plugin-yaml";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
 import icon from "astro-icon";
+import mermaid from "astro-mermaid";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeKatex from "rehype-katex";
 import rehypePrettyCode from "rehype-pretty-code";
@@ -22,7 +23,16 @@ export default defineConfig({
   server: {
     port: 3000,
   },
-  integrations: [icon(), mdx(), syncContentAssets()],
+  integrations: [
+    icon(),
+    mdx(),
+    syncContentAssets(),
+    mermaid({
+      mermaidConfig: {
+        layout: "elk",
+      },
+    }),
+  ],
   vite: {
     plugins: [tailwindcss(), yaml()],
   },

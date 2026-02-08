@@ -107,6 +107,7 @@ const {
       const newTheme = pressed ? "dark" : "light";
 
       document.documentElement.classList.toggle("dark", pressed);
+      document.documentElement.setAttribute("data-theme", newTheme);
       localStorage.setItem("colorTheme", newTheme);
 
       // Dispatch custom event to sync other theme toggles

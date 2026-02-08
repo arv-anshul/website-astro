@@ -18,6 +18,7 @@ function themeInit() {
   function applyTheme(theme) {
     const resolved = theme === "system" || !theme ? getSystemTheme() : theme;
     document.documentElement.classList.toggle("dark", resolved === "dark");
+    document.documentElement.setAttribute("data-theme", resolved);
   }
 
   applyTheme(getStoredTheme());
