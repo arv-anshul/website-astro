@@ -1,6 +1,5 @@
 @import "@fontsource-variable/inter";
 @import "@fontsource-variable/geist-mono";
-@import "@fontsource-variable/source-serif-4";
 
 @import "tailwindcss";
 @import "tw-animate-css";
@@ -111,7 +110,7 @@
   --input: var(--color-neutral-200);
   --outline: var(--color-neutral-400);
   --radius: 0.5rem;
-  --font-heading: "Source Serif 4 Variable", var(--font-serif);
+  --font-heading: "Inter Variable", var(--font-sans);
   --font-mono: "Geist Mono Variable", monospace;
 
   /* sidebar variables */
