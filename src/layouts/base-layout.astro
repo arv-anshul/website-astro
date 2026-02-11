@@ -40,8 +40,7 @@ const {
           basic: {
             title: title,
             type: "website",
-            // TODO: Use takumi or satori to create dynamic OG images for each route.
-            image: "https://repository-images.githubusercontent.com/743063632/6f3af08f-216b-4ab6-a2a4-e8165efc15d7",
+            image: new URL("og.webp", Astro.url).toString(),
             url: Astro.url,
           },
           optional: {
