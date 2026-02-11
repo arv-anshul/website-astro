@@ -38,8 +38,6 @@ export default defineConfig({
   },
   redirects: {
     "/about": "/",
-    "/resume":
-      "https://cdn.jsdelivr.net/gh/arv-anshul/resume@main/pdf/basic.pdf",
   },
   markdown: {
     syntaxHighlight: false,

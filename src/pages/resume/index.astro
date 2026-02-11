@@ -1,0 +1,11 @@
+---
+import { joinPaths } from "@astrojs/internal-helpers/path";
+import BaseLayout from "@/layouts/base-layout.astro";
+
+const redirectUrl = joinPaths(Astro.url.toString(), "basic");
+return Astro.redirect(redirectUrl);
+---
+
+<BaseLayout title="Resume- ARV" description="Resume of ARV in PDF format.">
+  <p>Redirecting to <a href={redirectUrl}>resume</a>...</p>
+</BaseLayout>
