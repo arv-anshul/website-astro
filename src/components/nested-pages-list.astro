@@ -45,11 +45,11 @@ const sortedPages = [...pages].sort((a, b) => {
           <a
             href={`/v2/projects/${page.id}`}
             class:list={[
-              "group block rounded-md px-2 py-2 transition-all duration-200",
+              "group block rounded px-2 py-2 transition-all duration-200",
               "hover:bg-accent hover:text-accent-foreground",
               "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
               {
-                "bg-muted text-accent-foreground font-medium border-l-2 border-muted-foreground": isActive,
+                "bg-muted text-accent-foreground font-medium": isActive,
                 "text-muted-foreground hover:text-foreground": !isActive,
               }
             ]}
@@ -60,7 +60,7 @@ const sortedPages = [...pages].sort((a, b) => {
                 <span
                   class:list={[
                     "text-xl mt-0.5 shrink-0 transition-transform group-hover:scale-110",
-                    isActive ? "opacity-100" : "opacity-70"
+                    isActive ? "opacity-100 scale-105" : "opacity-70"
                   ]}
                   aria-hidden="true"
                 >
@@ -78,7 +78,7 @@ const sortedPages = [...pages].sort((a, b) => {
                   </span>
 
                   {!removeTrailingForwardSlash(page.id).includes("/") && (
-                    <span class="inline-flex items-center rounded-md bg-muted/10 px-2 py-0.5 text-xs font-medium text-primary ring-1 ring-inset ring-primary/20">
+                    <span class="inline-flex items-center rounded-full bg-muted/10 px-2 py-0.5 text-xs font-medium text-primary ring-1 ring-inset ring-primary/20">
                       Index
                     </span>
                   )}

@@ -24,7 +24,7 @@ const { project, class: className, ...props } = Astro.props as Props;
 <Card class:list={["pt-4 gap-3 rounded", className]} {...props}>
   <CardHeader class="flex flex-wrap justify-between items-start px-3 md:px-5">
     <div>
-      <CardTitle class="flex items-center gap-1">
+      <CardTitle class="flex items-center gap-1 font-bold">
         {project.relative_url ?
           <a href={project.relative_url}  class="flex items-center gap-1 hover:text-outline transition">
             {project.title} <Icon name="lucide:link" size={15} />
