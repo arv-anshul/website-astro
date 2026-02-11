@@ -27,7 +27,7 @@ that we have used
 - Performed intensive EDA by creating many additional features using comment's chars, words and sentences.
 - Generated wordcloud to see different sentiment's frequent words.
 
-[:material-notebook: **EDA Notebook**](#)
+[**EDA Notebook**](#)
 
 ## Model Building Steps
 

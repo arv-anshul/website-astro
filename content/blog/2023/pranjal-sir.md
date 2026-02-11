@@ -6,8 +6,7 @@ icon: mdi:account-tie
 categories: [thoughts, person]
 ---
 
-> :calendar:{ title="27 November, 2023" } Currently I am learning MLOps with CampusX DSMP 2.0 Course from
-> [@PranjalSir](https://github.com/PranY).
+> On 27 November, 2023 I am learning MLOps with CampusX DSMP 2.0 Course from [@PranjalSir](https://github.com/PranY).
 
 He introduced us MLOps in a very interesting way with a analogy of **Organising a Concert for World Cup Final**. You can
 read [this notebook](https://github.com/arv-anshul/campusx-mlops) to see that beautiful analogy to get the high level

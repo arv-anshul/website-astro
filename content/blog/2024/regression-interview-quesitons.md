@@ -30,7 +30,7 @@ Relationship of every input feature must be **linear** with output feature.
 Input data must not correalate with each other, they must be independent of each other. One can use **VIF**{
 title="Variance Inflation Factor" } or correlation matrices to know whether their input data is correlated.
 
-:eyes: See [this section](#why-multi-collinearity-is-a-problem) for better explanation.
+See [this section](#why-multi-collinearity-is-a-problem) for better explanation.
 
 ### 3. Normally Distributed Residuals
 
@@ -39,8 +39,8 @@ title="Variance Inflation Factor" } or correlation matrices to know whether thei
 > Represent the vertical distance between a data point and the regression line. They are the errors of the model which
 > the model can't able to capture while training.
 
-The distribution of the residuals must be normally distributed. One can analyse this using **KDE**{ title="Kernel
-Density Estimator Function" } or [QQ-Plot](https://library.virginia.edu/data/articles/understanding-q-q-plots).
+The distribution of the residuals must be normally distributed. One can analyse this using **KDE** (Kernel Density
+Estimator Function) or [QQ-Plot](https://library.virginia.edu/data/articles/understanding-q-q-plots).
 
 ### 4. Homoscedacity
 
@@ -91,13 +91,13 @@ measures like p-values
 
 While ^^Pearson Correlation focuses on the relationship between two variables, Multicollinearity deals with the
 interplay among multiple independent variables in a regression context^^, impacting the model's interpretability and
-reliability. :simple-perplexity:{ .bounce .secondary }
+reliability.
 
 ## What is VIF? Why VIF > 5?
 
-**VIF**{ title="Variance Inflation Factor" } is a measure that quantifies how much the variance of an estimated
-regression coefficient increases if your predictors are correlated. A VIF greater than 5 or 10 is often considered
-indicative of multicollinearity.
+**VIF** _(Variance Inflation Factor)_ is a measure that quantifies how much the variance of an estimated regression
+coefficient increases if your predictors are correlated. A VIF greater than 5 or 10 is often considered indicative of
+multicollinearity.
 
 **VIF > 5** suggests that the variance of the coefficient estimate is 5 times higher due to multicollinearity, making
 the estimate less reliable and harder to interpret.
@@ -113,17 +113,16 @@ In other words, R-Squared shows how well a regression model (independent variabl
 (dependent variable).
 
 R-Squared is also commonly known as the coefficient of determination. It is a goodness of fit model for linear
-regression analysis.
-[:clipboard:{ title="Copied From" }](https://www.freecodecamp.org/news/what-is-r-squared-r2-value-meaning-and-definition/)
+regression analysis. [Copied From](https://www.freecodecamp.org/news/what-is-r-squared-r2-value-meaning-and-definition/)
 
 ### What Does an R Squared Value Mean?
 
 A R-Squared value shows how well the model predicts the outcome of the dependent variable. R-Squared values range from 0
 to 1.
 
-An R-Squared ^^value of 0 means that the model explains or predicts 0% of the relationship^^ between the dependent and
-independent variables. And a ^^value of 1 indicates that the model predicts 100% of the relationship^^, and a ^^value of
-0.5 indicates that the model predicts 50%^^, and so on.
+An R-Squared **value of 0 means that the model explains or predicts 0% of the relationship** between the dependent and
+independent variables. And a **value of 1 indicates that the model predicts 100% of the relationship**, and a **value of
+0.5 indicates that the model predicts 50%**, and so on.
 
 ### Formula for R Squared
 
@@ -149,10 +148,10 @@ regression model.
 While R2 score increases or remains the same as new predictors are added to the model, even if the newly added
 predictors are independent of the target variable and don't add any value to the predicting power of the model.
 
-On the other hand, ^^Adjusted R2 score only increases if the newly added predictor improves the model's predicting
-power^^. It helps determine the goodness of fit for a multiple regression model by considering the number of predictors
-and the sample size. ^^Adjusted R2 penalizes the model for useless variables, while R2 does not^^, making Adjusted R2 a
-more reliable measure of goodness of fit for multiple regression problems. :simple-perplexity:{ .bounce .secondary }
+On the other hand, **Adjusted R2 score only increases if the newly added predictor improves the model's predicting
+power**. It helps determine the goodness of fit for a multiple regression model by considering the number of predictors
+and the sample size. **Adjusted R2 penalizes the model for useless variables, while R2 does not**, making Adjusted R2 a
+more reliable measure of goodness of fit for multiple regression problems.
 
 > [!INFO] Resources
 >

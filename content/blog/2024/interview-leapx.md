@@ -6,10 +6,10 @@ icon: mdi:microsoft-teams
 categories: [interview, project, internship, thoughts]
 ---
 
-[:material-notebook: Week 24 Journal](../../journal/2024/06.md#week-24-journal){ .md-button .slim-button }
+[Week 24 Journal](../../journal/2024/06.md#week-24-journal)
 
-Aditya reached me > conducted a meeting on :material-microsoft-teams: > ask questions related to projects, education >
-other two co-founder joined the meeting > ask to solve a problem in Real Estate domain
+Aditya reached me > conducted a meeting on Microsoft Teams > ask questions related to projects, education > other two
+co-founder joined the meeting > ask to solve a problem in Real Estate domain
 
 ---
 

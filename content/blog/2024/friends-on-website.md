@@ -13,8 +13,8 @@ others (who visit my website) to connect with them.
 
 1. Define a JSON schema for `friends.yaml` file. See the [json-schema](https://github.com/arv-anshul/arv-anshul.github.io/tree/main/schemas/friends-schema.json).
 2. Use builtin [**Grids**](https://squidfunk.github.io/mkdocs-material/reference/grids/) to showcase the friend's information. See some experimental [layouts](#layouts).
-3. Friends' description must be between 50-70 words. If they fail to maintain them ^^then use ChatGPT to reduce the
-   size^^.
+3. Friends' description must be between 50-70 words. If they fail to maintain them **then use ChatGPT to reduce the
+   size**.
 
 ### How Do each Friend's Section Looks?
 

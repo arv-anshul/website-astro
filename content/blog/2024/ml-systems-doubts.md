@@ -11,21 +11,21 @@ links:
 
 # ML Systems Doubts
 
-I've been working on a **project of Machine Learning** where I am using :simple-docker: Docker to containerise my
-applications (frontend and backend). But I'm facing difficulties while using ML models in the containers.
+I've been working on a **project of Machine Learning** where I am using Docker to containerise my applications (frontend
+and backend). But I'm facing difficulties while using ML models in the containers.
 
 > [!WARNING] Question
 >
-> 1. How to train the model and also use :simple-mlflow: MLFlow for model monitoring?
+> 1. How to train the model and also use MLFlow for model monitoring?
 > 2. I don't know how to integrate the ML models in the containers.
 >    1. Should I deploy my models in cloud and from there I can fetch the models for prediction?
 >    2. Should I add the models into the container from which I can easily make prediction?
 
 ## MLFlow
 
-In my project [:material-book:{ .secondary }](https://github.com/arv-anshul/yt-watch-history "Project on GitHub")
-`yt-watch-history`, I am using MLFlow (but not using it also) means I have written code to train the model with MLFlow
-but I can also train without it (and I always use this only).
+In my project [Project on GitHub](https://github.com/arv-anshul/yt-watch-history) `yt-watch-history`, I am using MLFlow
+(but not using it also) means I have written code to train the model with MLFlow but I can also train without it (and I
+always use this only).
 
 > [!WARNING] Question
 >

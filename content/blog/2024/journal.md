@@ -21,7 +21,7 @@ Using this I will be able to follow a set of instructions which helps me to writ
 manner.
 
 > I have wrote snippets for this for
-> [:simple-visualstudiocode: vscode](https://github.com/arv-anshul/diary/tree/main/.vscode/dev-journal.code-snippets).
+> [vscode](https://github.com/arv-anshul/diary/tree/main/.vscode/dev-journal.code-snippets).
 
 1. Monthly journal file starts with `# Journal of <month-name>`.
 2. Journal will'be maintain on weekly basis.

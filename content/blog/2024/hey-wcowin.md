@@ -7,11 +7,11 @@ categories: [person, friends, thoughts]
 ---
 
 I had opened a [discussion] in [mkdocs-material] GitHub repo and tomorrow and [@Wcowin] wrote a comment on that
-[discussion] and I replied him generously. After my reply ^^he followed me^^ and this makes me curious; **"Why/How any
+[discussion] and I replied him generously. After my reply **he followed me** and this makes me curious; **"Why/How any
 random guy can follow me?"** Because I can't do this to anybody.
 
 Then, I started exploring his GitHub account and visited his [personal website] and that website is just wonderful place
-because that ^^palace^^{ title="place" } contains tons of thoughts :star_struck: of him.
+because that **palace** contains tons of thoughts :star_struck: of him.
 
 > [!NOTE] Wonderful
 >
@@ -19,18 +19,17 @@ because that ^^palace^^{ title="place" } contains tons of thoughts :star_struck:
 > surprised :exploding_head:), because I also get similar thought but can't able to maintain it like this. "Just
 > wonderful :people_hugging:"
 >
-> - [:octicons-link-external-16:](https://wcowin.work/relax/wkwMath/5.html#3) I don't know is he really thought this or
->   just copied from somewhere.
-> - [:octicons-link-external-16:](https://wcowin.work/relax/Movie/tuijianfanju.html#_20) He maintain his experiences of
->   watching Dramas, Movies and TV Shows :nerd_face:.
-> - [:octicons-link-external-16:](https://wcowin.work/relax/Essay/zhonggao.html) **WTF**{ title="Why The Fuck?" } are
->   these in public :face_with_peeking_eye:.
-> - [:octicons-link-external-16:](https://wcowin.work/about/run.html) I haven't read this page bu it seems good; I am
->   going to read this page soon.
+> - [Link to page](https://wcowin.work/relax/wkwMath/5.html#3) I don't know is he really thought this or just copied
+>   from somewhere.
+> - [Link to page](https://wcowin.work/relax/Movie/tuijianfanju.html#_20) He maintain his experiences of watching
+>   Dramas, Movies and TV Shows :nerd_face:.
+> - [Link to page](https://wcowin.work/relax/Essay/zhonggao.html) **WTF** _(Why The Fuck?)_ are these in public
+>   :face_with_peeking_eye:.
+> - [Link to page](https://wcowin.work/about/run.html) I haven't read this page bu it seems good; I am going to read
+>   this page soon.
 
-:handshake:{ .middle } I am thankful that I met you and thankful to you that you shared your thoughts like this and I'm
-able to read it (after translation). I am thankful to you that you met me and also looking forward to your next
-thoughts.
+I am thankful that I met you and thankful to you that you shared your thoughts like this and I'm able to read it (after
+translation). I am thankful to you that you met me and also looking forward to your next thoughts.
 
 **Meet you at your next thought.**
 
@@ -39,7 +38,7 @@ thoughts.
 I am searching his [Friends page][friends] on his website (but navigating with Chinese language) but into his
 [Blog page][blog] and after scrolling a bit **I read my name (Anshul Raj Verma)** because others words were written in
 Chinese which got my focus to my name. After sudden realization I copied the sentence and pasted it on
-:simple-googletranslate: [Google Translate] and came to know that he wrote:
+[Google Translate] and came to know that he wrote:
 
 > [!IMPORTANT] Translation
 >

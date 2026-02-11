@@ -30,10 +30,10 @@ I have introduced to Starship Prompt a week ago and it makes my shell prompt ama
 
 ## :wrench: Customization
 
-You can customize your prompt for each programming languages you uses like :simple-python: Python, :simple-javascript:
-JavaScript, :simple-rust: Rust and more. See [official documentation](https://starship.rs/config/) to know more.
+You can customize your prompt for each programming languages you use like Python, JavaScript, Rust, and more. See
+[official documentation](https://starship.rs/config/) to know more.
 
-### **Example:** :simple-python: Python
+### **Example:** Python
 
 ```toml
 [python]
@@ -42,7 +42,7 @@ style = "arv_python"
 format = "[](fg:$style)[$symbol( $version)[( \\($virtualenv\\))](bold bg:$style)](bg:$style)[](fg:$style)"
 ```
 
-### **Example:** :simple-docker: Docker
+### **Example:** Docker
 
 ```toml
 [docker_context]
@@ -110,10 +110,10 @@ arv_custom = "black"
 1. **Palette Preffix**: Palette's `keys` must have a preffix (in my case it is `"arv_"`).
 2. **ANSI Codes**: I have defined colors in **ANSI Codes**. See this
    [Gist](https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797 "Github Gist") to know more about ANSI Codes.
-3. **Own Color Palette**: I have defined programming language-wise _(or module-wise)_{ title="In Starship Language" }
-   colors which makes easy to change/manipulate the color of any language.
+3. **Own Color Palette**: I have defined programming language-wise _(or module-wise)_ colors which makes easy to
+   change/manipulate the color of any language.
 
-> You can also create your own custom color palette in `~/.config/starship.toml`{ title="In MacOS" }.
+> You can also create your own custom color palette in `~/.config/starship.toml`.
 
 ## :people_hugging: Extra customization with custom modules
 
@@ -145,7 +145,7 @@ I have used `custom` modules to just show some desirable icons in the prompt but
 ```
 
 1. **Show Custom Icons**: I used `custom` modules to show icons by detecting files and folders. For example, prompt will
-   show :simple-github: icons when `.github` folder is present in the current directory.
+   show icons when `.github` folder is present in the current directory.
 
 > Refer to [official documentation](https://starship.rs/config/#custom-commands) to know more about custom modules.
 

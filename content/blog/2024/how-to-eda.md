@@ -108,7 +108,7 @@ This represents the `#!math (\text{Q1} - 1.5*\text{IQR})`, 25th %tile `#!math (\
 
 > BoxPlot easily shows the outliers of the data.
 
-![boxplot](https://miro.medium.com/max/9000/1*2c21SkzJMf3frPXPAR_gZA.png){ width="70%" }
+![boxplot](https://miro.medium.com/max/9000/1*2c21SkzJMf3frPXPAR_gZA.png)
 
 #### Percentile
 

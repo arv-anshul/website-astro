@@ -12,19 +12,19 @@ Joined LeapX.ai as Data Science Intern from 27 June, 2024 for 3 months.
 
 Project done while working with LeapX as Data Science Intern.
 
-### :simple-scrapy: Properties Scraper
+### Properties Scraper
 
 Project scrapes data from Housing.com website and dump into MongoDB after basic transformation using Polars, I've used
 Scrapy to scrape data. Wrote a python script which automate the process of scraping multiple city in one go.
 
-### :simple-taipy: Housing Dashboard
+### Housing Dashboard
 
 A dashboard which shows affluent areas of a city after applying clustering on the real estate data of the city.
 
-- Uses :simple-taipy: Taipy framework to create dashboard.
+- Uses Taipy framework to create dashboard.
 - Fetch properties data from MongoDB.
 - Perform clustering and plot circles on map of selected city with its _affluence rank_ and other metrics.
-- Deployed on :simple-huggingface: Hugging Face Spaces.
+- Deployed on Hugging Face Spaces.
 
 ### :llama: Ad Campaign Bot
 
@@ -33,13 +33,13 @@ A Facebook Ads Campaign Bot powered by OpenAI LLMs where users can query their c
 - Bot is flexible enough to answer user's query on multiple camping data format such as _daily or hourly campaign data_.
 - Bot can also display graphs/plots related to each query (with some limitations).
 
-### :simple-facebook: Campaign Dashboard
+### Campaign Dashboard
 
 Streamlit dashboard to show insights around Facebook Ads Campaign using Data Analysis and charts using campaign metrics
 like CTL, CPM, CPC, CTR and more.
 
 - Refactored code given by @Aditya.
-- Deployed on :simple-huggingface: Hugging Face Spaces.
+- Deployed on Hugging Face Spaces.
 
 ## After LeapX
 

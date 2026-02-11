@@ -21,9 +21,9 @@ categories: [project, frontend]
 > [!IMPORTANT]
 >
 > 1. Documentation is the most important resource for your learning and I followed it thoroughly.
-> 2. Took help of :simple-openai: ChatGPT to solve bugs and asked questions related to these frameworks/tools.
+> 2. Took help of ChatGPT to solve bugs and asked questions related to these frameworks/tools.
 
-- Followed [only one YouTube video](https://youtu.be/VeNfHj6MhgA) to learn :simple-vuedotjs: VueJs.
+- Followed [only one YouTube video](https://youtu.be/VeNfHj6MhgA) to learn VueJs.
 - Used [shadcn/vue](https://shadcn-vue.com) as components library. _Just followed the docs._
 - Whole `build_frontend.yaml` Github Action workflow written by ChatGPT, isn't it amazing :exploding_head:.
 

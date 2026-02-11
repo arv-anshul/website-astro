@@ -38,7 +38,7 @@ projects like [arv-anshul/campusx-real-estate](https://github.com/arv-anshul/cam
 
 If you follow/learn these resources then you will understand how do Web Scraping works and how to do it.
 
-## :simple-pypi: My Python Package For Web Scraping
+## My Python Package for Web Scraping
 
 I have done lots of project on Web Scraping but while doing those web scraping projects I doesn't found a good python
 package to handle/parse cURL command. But I found a package called [@spulec/uncurl](https://github.com/spulec/uncurl) on

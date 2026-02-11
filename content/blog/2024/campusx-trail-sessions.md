@@ -7,10 +7,9 @@ categories: [thoughts]
 ---
 
 Nitish Sir wants to recruit teachers to teach along in the course and for that he had to evaluate applicants thats why
-he conducted trail session in DSMP 2.0 course where the selected applicants comes and take a
-:fontawesome-solid-user-clock: 2 Hours long session on assigned topic (assigned by Nitish Sir). The applicant take
-seesion and the students had to fill a Google Forms Feedback Form. Applicants are evaluted on the basis of feedback
-given by the students.
+he conducted trail session in DSMP 2.0 course where the selected applicants comes and take a 2 Hours long session on
+assigned topic (assigned by Nitish Sir). The applicant take seesion and the students had to fill a Google Forms Feedback
+Form. Applicants are evaluted on the basis of feedback given by the students.
 
 Session are conducted in March, 2024. and all the trial session are awesome and amazing (except some). I have learned
 many new concepts from them and I've rank them below on the basis of my experiences.

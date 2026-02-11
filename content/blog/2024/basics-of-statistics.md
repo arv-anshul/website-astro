@@ -172,8 +172,7 @@ since the magnitude of covariance is affected by the scale of the variables.
 - The variance of a variable is the average of the squared differences from the mean, while the covariance between two
   variables is the average product of their deviations from their respective means.
 
-![Covariance](https://miro.medium.com/v2/resize:fit:1400/0*rU-DLXwSmfdEruQ9.jpg){ .base-border-radius style="filter:
-invert(100%);" }
+![Covariance](https://miro.medium.com/v2/resize:fit:1400/0*rU-DLXwSmfdEruQ9.jpg)
 
 ### Corelation
 
@@ -190,7 +189,7 @@ correlation, and a correlation coefficient of 1 indicates a perfect positive cor
 
 #### Correlation and Causation
 
-The phrase ^^"correlation does not imply causation"^^[^1] means that just because two variables are associated with each
+The phrase **"correlation does not imply causation"**[^1] means that just because two variables are associated with each
 other, it does not necessarily mean that one causes the other.
 
 In other words, a correlation between two variables does not necessarily imply that one variable is the reason for the

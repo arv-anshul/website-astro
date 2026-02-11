@@ -6,7 +6,7 @@ icon: simple-icons:rust
 categories: [thoughts, programming]
 ---
 
-Finally, learning my ~~dream language~~{ title="After using some top-notch projects written in Rust." } **Rust**.
+Finally, learning my ~~dream language~~ _(after using some top-notch projects written in it)_ **Rust**.
 
 Created new [arv-anshul/thrust](https://github.com/arv-anshul/thrust) GitHub repo which contains my learning resources
 and my practice progams. I have written some thoughts in the repo's

@@ -12,8 +12,8 @@ Tree based models and Regression models are widely used Machine Learning models.
 for you. Also, many concepts from these models are borrowed by advance Machine Learning models like Gradient Boosting,
 XGBoost, etc.
 
-These models are also great choice for :fontawesome-user-tie: interviewers so from these models they ask many interview
-questions. This blog mainly focuses on tree based models.
+These models are also great choice for interviewers so from these models they ask many interview questions. This blog
+mainly focuses on tree based models.
 
 | Aspect              | Decision Trees                                                                                                                                   | Regression Models                                                                     |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------- |
@@ -28,12 +28,12 @@ questions. This blog mainly focuses on tree based models.
 
 | Aspect                       | Tree Based Models                                                                                                                                                                                   | Linear Models                                                                                                                                                                                                                                                         |
 | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Approach**                 | Tree based models ^^uses Divide & Conquer approach^^ to learn the data essence by making cut into data space to create small spaces which segregate the homogenous data.                            | Regression models tries to create/fit a line in-between the data space, to get the essence of the data and tries to keep the value of loss function minimum as possible.                                                                                              |
+| **Approach**                 | Tree based models **uses Divide & Conquer approach** to learn the data essence by making cut into data space to create small spaces which segregate the homogenous data.                            | Regression models tries to create/fit a line in-between the data space, to get the essence of the data and tries to keep the value of loss function minimum as possible.                                                                                              |
 | **Non-Linearity**            | Tree models can handle both linear and non-linear data.                                                                                                                                             | Regression models performs better with linearly separable data but it fails to capture the essence of non-linear data.                                                                                                                                                |
 | **Computational Complexity** | Tree models are more complex than linear models, especially training complexity of Ensemble techniques as it finds optimal solution iteratively.                                                    | Regression models has an upper edge here because it requires find the optimal co-efficient which minimizes the loss function and for that it uses Gradient Descent techniques.                                                                                        |
-| **Effects of Outliers**      | Tree models are generally robust to [outliers] because they creates multiple decision boundaries which separates the outliers easily and model doesn't affect much from it.                         | Regression models are highly sensitive to [outliers] because when the data has outliers the best fit line will try to fit the outliers values to reduce the loss function. ^^To reduce this sensitivity we have [Regularization](regularization-in-ml.md) concepts^^. |
+| **Effects of Outliers**      | Tree models are generally robust to [outliers] because they creates multiple decision boundaries which separates the outliers easily and model doesn't affect much from it.                         | Regression models are highly sensitive to [outliers] because when the data has outliers the best fit line will try to fit the outliers values to reduce the loss function. **To reduce this sensitivity we have [Regularization](regularization-in-ml.md) concepts**. |
 | **Handling Null Values**     | Some tree based algorithms/models can handle null values like **XGBoost**.                                                                                                                          | Linear model can't handle null values at all. Preprocess the data before training linear models.                                                                                                                                                                      |
-| **Interpretable**            | Only Decision Trees are interpretable but libraries like [SHAP](https://shap.readthedocs.io/en/latest/) can explain ensemble tree models. ^^RandomForest can be used to calc features importance.^^ | Linear models are very interpretable because it calculates the features co-efficient with target feature.                                                                                                                                                             |
+| **Interpretable**            | Only Decision Trees are interpretable but libraries like [SHAP](https://shap.readthedocs.io/en/latest/) can explain ensemble tree models. **RandomForest can be used to calc features importance.** | Linear models are very interpretable because it calculates the features co-efficient with target feature.                                                                                                                                                             |
 
 ## 2. Can You Describe a Real-World Application Where You Would Prefer to Use a RandomForest over a Logistic Regression Model?
 
@@ -95,7 +95,6 @@ tree size `#!math T`. This function is used in cost complexity pruning to minimi
 and prevent overfitting. By adjusting the cost complexity parameter `#!math c_p`, decision trees can be pruned
 effectively to improve generalization to test data.
 
-:simple-scikitlearn:{ .scikitlearn }
 [`plot_cost_complexity_pruning`](https://scikit-learn.org/stable/auto_examples/tree/plot_cost_complexity_pruning.html)
 
 ## 5. How Missing Values Are Handled in Tree Based Algorithms like XGBoost?
@@ -103,7 +102,7 @@ effectively to improve generalization to test data.
 > XGBoost only handle missing values present in Input features. It doesn't handle null values present in Output/Target
 > feature. You have to preprocess or remove the null values of Output feature.
 
-:x: Not completed!
+Not completed!
 
 ## 6. What Is the Difference Between ID3, C4.5, and CART Algorithms?
 
@@ -130,30 +129,28 @@ hyperparameters in DecisionTree, RandomForest classes apply pre-pruning on model
 5. **`max_features`**: The number of features to consider when looking for the best split.
 6. **`max_leaf_nodes`**: Grow a tree with max_leaf_nodes in best-first fashion. Best nodes are defined as relative
    reduction in impurity. If `None` then unlimited number of leaf nodes.
-7. **`min_impurity_decrease`**: :octicons-verified-16:{ .primary title="Best parameter for pruning" } A node will be
-   split if this split induces a decrease of the impurity greater than or equal to this value.
+7. **`min_impurity_decrease`**: _(Best parameter for pruning)_ A node will be split if this split induces a decrease of
+   the impurity greater than or equal to this value.
 8. **`class_weight`**: Weights associated with classes in the form `{class_label: weight}`. If `None`, all classes are
    supposed to have weight one. For multi-output problems, a list of dicts can be provided in the same order as the
    columns of y.
 9. **`ccp_alpha`**: Complexity parameter used for Minimal Cost-Complexity Pruning. The subtree with the largest cost
    complexity that is smaller than ccp_alpha will be chosen. By default, no pruning is performed.
 
-:simple-scikitlearn:{ .scikitlearn }
-[`sklearn.tree.DecisionTreeClassifier`](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier){
-title="scikit-learn documentation" }
+[`sklearn.tree.DecisionTreeClassifier`](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier)
 
 ## 8. Discuss the Role of Shrinkage (Learning Rate) in Boosting Algorithms. How Does It Contribute to Model Performance and Robustness?
 
 - The learning rate, also known as shrinkage, plays a crucial role in boosting algorithms by determining how fast or
   slow a model updates its weights based on the gradient of the loss function.
-- ^^A fixed learning rate^^ can lead to challenges such as overshooting the optimal point with a high value or slow
+- **A fixed learning rate** can lead to challenges such as overshooting the optimal point with a high value or slow
   convergence with a low value, highlighting the importance of dynamic adjustments during training.
-- ^^Adaptive learning rate^^ schedules, like decay learning rates, gradually reduce the learning rate as training
+- **Adaptive learning rate** schedules, like decay learning rates, gradually reduce the learning rate as training
   progresses, helping to avoid overshooting the minimum and fine-tune model parameters more precisely.
-- ^^Decay learning rates^^ can be implemented using various methods like fixed or exponential decay rates, step or
+- **Decay learning rates** can be implemented using various methods like fixed or exponential decay rates, step or
   inverse decay functions, and are essential for efficient and effective model training, especially in complex and
   non-convex problems.
-- ^^By adjusting the learning rate dynamically^^, decay learning rates ensure that the model progresses effectively
+- **By adjusting the learning rate dynamically**, decay learning rates ensure that the model progresses effectively
   towards the optimal solution, balancing the size of steps taken during training to enhance model optimization and
   robustness.
 
@@ -187,8 +184,8 @@ the following class.
 
 ## Similar Blogs
 
-- [:material-graph-outline: Decision Tree](./decision-tree)
-- [:material-chart-scatter-plot: Regression Interview Questions](./regression-interview-quesitons)
-- [:adhesive_bandage: Regularization in ML](./regularization-in-ml)
+- [Decision Tree](./decision-tree)
+- [Regression Interview Questions](./regression-interview-quesitons)
+- [Regularization in ML](./regularization-in-ml)
 
 [outliers]: outlier-univariate.md
