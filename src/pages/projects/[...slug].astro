@@ -47,8 +47,21 @@ const { Content } = await render(project);
 ---
 
 <BaseLayout
-  title={`${project.data.title} - ARV`}
+  title={`${project.data.title} - ARV Project`}
   description={project.data.description}
+  seo={{
+    basic: {
+      title: project.data.title,
+      type: "website",
+      image: new URL(`og.webp`, Astro.url).toString(),
+      url: Astro.url,
+    },
+    article: {
+      publishedTime: project.data.pubDate.toUTCString(),
+      authors: [project.data.author],
+      tags: project.data.categories,
+    },
+  }}
 >
   <div
     class="flex flex-col flex-1 mx-auto md:max-w-3/5 items-center justify-center px-4 py-8"

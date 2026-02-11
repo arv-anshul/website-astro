@@ -1,14 +1,14 @@
-import type { InferEntrySchema } from "astro:content";
-import { getCollection } from "astro:content";
+import type { DataEntryMap, InferEntrySchema } from "astro:content";
 import { extractResourceUrls, Renderer } from "@takumi-rs/core";
 import { fetchResources } from "@takumi-rs/helpers";
 import { fromJsx } from "@takumi-rs/helpers/jsx";
-import type { GetStaticPaths } from "astro";
 import { html } from "satori-html";
-import { getBlogSlugs } from "@/lib/blog-utils";
 import getIconSVGString from "@/lib/icon-svg";
 
-async function getImageBuffer(url: string, data: InferEntrySchema<"blog">) {
+export async function getImageBuffer(
+  url: string,
+  data: InferEntrySchema<keyof DataEntryMap>
+) {
   // Convert <svg> component into data URI to render it via <img> tag
   const calendarIcon = await getIconSVGString("lucide:calendar");
   const calendarIconUri = `data:image/svg+xml,${encodeURIComponent(calendarIcon.replace(/currentColor/g, "#a1a1aa"))}`;
@@ -28,19 +28,19 @@ async function getImageBuffer(url: string, data: InferEntrySchema<"blog">) {
           <div tw="flex flex-col">
             <h1 tw="text-7xl mt-0 mb-2 font-bold text-white leading-tight">${data.title}</h1>
             <div tw="flex gap-2 items-center text-zinc-400">
-              <img src="${calendarIconUri}" tw="h-6 w-6" />
-              <span tw="text-lg mr-4"> ${data.pubDate.toLocaleDateString("en-IN", { year: "numeric", month: "short", day: "2-digit" })} </span>
-              <img src="${userIconUri}" tw="h-6 w-6" />
-              <span tw="text-lg">${data.author}</span>
+              <img src="${calendarIconUri}" tw="h-8 w-8" />
+              <span tw="text-xl mr-4"> ${data.pubDate.toLocaleDateString("en-IN", { year: "numeric", month: "short", day: "2-digit" })} </span>
+              <img src="${userIconUri}" tw="h-8 w-8" />
+              <span tw="text-xl">${data.author}</span>
             </div>
           </div>
           <!-- Icon -->
-          <div tw="flex items-center justify-center w-28 h-28 rounded-xl bg-zinc-800">
-            <img src="${iconDataUri}" tw="h-20 w-20" />
+          <div tw="flex items-center justify-center w-32 h-32 rounded-xl bg-zinc-800">
+            <img src="${iconDataUri}" tw="h-24 w-24" />
           </div>
         </div>
         <!-- Description -->
-        <p tw="text-2xl mb-auto text-zinc-400 leading-relaxed overflow-hidden"> ${data.description} </p>
+        <p tw="text-3xl mb-auto text-zinc-400 leading-relaxed overflow-hidden"> ${data.description} </p>
         <!-- Footer -->
         <p tw="text-zinc-600 text-2xl mb-0 text-end">${url.replace("/og.webp", "")}</p>
       </div>
@@ -59,25 +59,3 @@ async function getImageBuffer(url: string, data: InferEntrySchema<"blog">) {
   });
   return png.buffer as ArrayBuffer;
 }
-
-export const getStaticPaths = (async () => {
-  const posts = await getCollection("blog");
-  return posts.map((post) => {
-    const slugs = getBlogSlugs(post.id);
-    return {
-      params: { post: slugs.pop() },
-      props: post.data,
-    };
-  });
-}) satisfies GetStaticPaths;
-
-export const GET = async ({
-  request,
-  props,
-}: {
-  props: InferEntrySchema<"blog">;
-  request: Request;
-}) => {
-  const imageBuffer = await getImageBuffer(request.url, props);
-  return new Response(imageBuffer);
-};
