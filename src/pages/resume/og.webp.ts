@@ -1,4 +1,8 @@
-import { generateOgImage, type OgImageData } from "@/lib/og";
+import {
+  getImageBufferFromMarkup,
+  getMarkupFromOgData,
+  type OgImageData,
+} from "@/lib/og";
 
 const imageData: OgImageData = {
   title: "Resume - ARV",
@@ -12,6 +16,7 @@ export const GET = async ({
   props: OgImageData;
   request: Request;
 }) => {
-  const imageBuffer = await generateOgImage(request.url, imageData);
+  const markup = await getMarkupFromOgData(request.url, imageData);
+  const imageBuffer = await getImageBufferFromMarkup(markup);
   return new Response(imageBuffer);
 };

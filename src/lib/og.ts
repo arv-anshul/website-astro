@@ -1,22 +1,31 @@
 import type { DataEntryMap, InferEntrySchema } from "astro:content";
-import {
-  extractResourceUrls,
-  Renderer,
-  type RenderOptions,
-} from "@takumi-rs/core";
-import { fetchResources } from "@takumi-rs/helpers";
+import { Renderer, type RenderOptions } from "@takumi-rs/core";
 import { fromJsx } from "@takumi-rs/helpers/jsx";
 import OmSvg from "public/favicon.svg?raw";
 import { html } from "satori-html";
 import getIconSVGString from "@/lib/icon-svg";
 
-const renderOptions: RenderOptions = {
+export const renderOptions: RenderOptions = {
   width: 1200,
   height: 630,
   format: "webp",
 };
 
-export async function getImageBuffer(
+export async function getImageBufferFromMarkup(
+  markup: ReturnType<typeof html>,
+  options?: Partial<RenderOptions>
+) {
+  const node = await fromJsx(markup);
+
+  const renderer = new Renderer();
+  const png = await renderer.render(node, {
+    ...renderOptions,
+    ...options,
+  });
+  return png.buffer as ArrayBuffer;
+}
+
+export async function getMarkupFromEntry(
   url: string,
   data: InferEntrySchema<keyof DataEntryMap>
 ) {
@@ -32,7 +41,7 @@ export async function getImageBuffer(
 
   const markup = html`
       <!-- Card -->
-      <div tw="flex flex-col justify- w-full h-full rounded-3xl border-4 border-zinc-700 bg-zinc-900 p-10 pb-6">
+      <div tw="flex flex-col justify-center w-full h-full rounded-3xl border-4 border-zinc-700 bg-zinc-900 p-10 pb-6">
         <!-- Header row -->
         <div tw="flex justify-between items-start w-full">
           <!-- Title + Meta -->
@@ -57,16 +66,7 @@ export async function getImageBuffer(
       </div>
   `;
 
-  const node = await fromJsx(markup);
-  const urls = extractResourceUrls(node);
-  const fetchedResources = await fetchResources(urls);
-
-  const renderer = new Renderer();
-  const png = await renderer.render(node, {
-    ...renderOptions,
-    fetchedResources,
-  });
-  return png.buffer as ArrayBuffer;
+  return markup;
 }
 
 export interface OgImageData {
@@ -75,7 +75,7 @@ export interface OgImageData {
   icon?: string;
 }
 
-export async function generateOgImage(url: string, data: OgImageData) {
+export async function getMarkupFromOgData(url: string, data: OgImageData) {
   // Convert <svg> component into data URI to render it via <img> tag
   const mainIcon = data.icon
     ? await getIconSVGString(data.icon)
@@ -84,31 +84,18 @@ export async function generateOgImage(url: string, data: OgImageData) {
 
   const markup = html`
       <!-- Card -->
-      <div tw="flex flex-col justify- w-full h-full rounded-3xl border-4 border-zinc-700 bg-zinc-900 p-10 pb-6">
-        <!-- Header row -->
-        <div tw="flex flex-col items-center w-full">
-          <!-- Icon -->
-          <div tw="flex items-center justify-center w-36 h-36 rounded-xl bg-zinc-800">
-            <img src="${iconDataUri}" tw="h-28 w-28" />
-          </div>
-          <!-- Title -->
-          <h1 tw="text-7xl mt-0 mb-2 font-bold text-white leading-tight">${data.title}</h1>
+      <div tw="flex flex-col justify-center items-center w-full h-full rounded-3xl border-4 border-zinc-700 bg-zinc-900 p-10">
+        <!-- Icon -->
+        <div tw="flex items-center mt-0 mb-0 justify-center w-36 h-36 rounded-xl bg-zinc-800">
+          <img src="${iconDataUri}" tw="h-28 w-28" />
         </div>
+        <!-- Title -->
+        <h1 tw="text-7xl font-bold mt-0 mb-0 text-white leading-tight">${data.title}</h1>
         <!-- Description -->
-        <p tw="text-3xl mb-auto text-zinc-400 leading-relaxed overflow-hidden text-center"> ${data.description} </p>
-        <!-- Footer -->
-        <p tw="text-zinc-600 text-2xl mb-0 text-end">${url.replace("/og.webp", "")}</p>
+        <p tw="text-3xl text-zinc-400 mt-0 mb-0 leading-relaxed overflow-hidden text-center">${data.description}</p>
+        <p tw="text-zinc-600 text-2xl mt-2 mb-0 text-end">${url.replace("/og.webp", "")}</p>
       </div>
   `;
 
-  const node = await fromJsx(markup);
-  const urls = extractResourceUrls(node);
-  const fetchedResources = await fetchResources(urls);
-
-  const renderer = new Renderer();
-  const png = await renderer.render(node, {
-    ...renderOptions,
-    fetchedResources,
-  });
-  return png.buffer as ArrayBuffer;
+  return markup;
 }

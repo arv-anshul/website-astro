@@ -2,7 +2,7 @@ import type { DataEntryMap, InferEntrySchema } from "astro:content";
 import { getCollection } from "astro:content";
 import type { GetStaticPaths, GetStaticPathsItem } from "astro";
 import { getBlogSlugs } from "@/lib/blog-utils";
-import { getImageBuffer } from "@/lib/og";
+import { getImageBufferFromMarkup, getMarkupFromEntry } from "@/lib/og";
 
 async function getBlogData(): Promise<GetStaticPathsItem[]> {
   const collections = await getCollection("blog");
@@ -43,6 +43,7 @@ export const GET = async ({
   props: InferEntrySchema<keyof DataEntryMap>;
   request: Request;
 }) => {
-  const imageBuffer = await getImageBuffer(request.url, props);
+  const markup = await getMarkupFromEntry(request.url, props);
+  const imageBuffer = await getImageBufferFromMarkup(markup);
   return new Response(imageBuffer);
 };
