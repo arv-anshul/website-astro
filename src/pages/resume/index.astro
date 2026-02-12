@@ -3,9 +3,13 @@ import { joinPaths } from "@astrojs/internal-helpers/path";
 import BaseLayout from "@/layouts/base-layout.astro";
 
 const redirectUrl = joinPaths(Astro.url.toString(), "basic");
-return Astro.redirect(redirectUrl);
 ---
 
-<BaseLayout title="Resume- ARV" description="Resume of ARV in PDF format.">
+<BaseLayout title="Resume - ARV" description="Resume of ARV in PDF format.">
   <p>Redirecting to <a href={redirectUrl}>resume</a>...</p>
 </BaseLayout>
+
+<script is:inline define:vars={{ redirectUrl }}>
+  // biome-ignore lint/correctness/noUndeclaredVariables: biome lacks the feature
+  window.location.replace(redirectUrl);
+</script>
