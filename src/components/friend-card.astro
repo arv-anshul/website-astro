@@ -12,21 +12,14 @@ import {
 } from "@/components/starwind/card";
 import type { FriendsData } from "@/lib/data-loaders/friends";
 
-interface Props extends HTMLAttributes<"section"> {
+interface Props extends HTMLAttributes<"div"> {
   friend: FriendsData["friends"][number];
 }
 
 const { friend, class: className, ...props } = Astro.props as Props;
 ---
 
-<Card
-  class:list={[
-      "items-center gap-3",
-        className,
-    ]}
-  {...props}
-  data-card
->
+<Card class:list={["items-center gap-3", className]} {...props} data-card>
   <a href={friend.primary_url} target="_blank" class="h-30 w-30">
     <Image
       src={friend.avatar}
@@ -50,15 +43,15 @@ const { friend, class: className, ...props } = Astro.props as Props;
     class="flex flex-wrap gap-2 justify-center w-full p-2 border-muted"
   >
     {friend.socials.map((social) => (
-                <Button
-                    href={social.url}
-                    title={social.name}
-                    target="_blank"
-                    variant="outline"
-                    size="icon-sm"
-                >
-                    <Icon name={social.icon} />
-                </Button>
-            ))}
+        <Button
+          href={social.url}
+          title={social.name}
+          target="_blank"
+          variant="outline"
+          size="icon-sm"
+        >
+          <Icon name={social.icon} />
+        </Button>
+      ))}
   </CardFooter>
 </Card>

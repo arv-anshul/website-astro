@@ -29,10 +29,10 @@ const {
 
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/v2/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
+    <meta charset="utf-8">
+    <link rel="icon" type="image/svg+xml" href="/v2/favicon.svg">
+    <meta name="viewport" content="width=device-width">
+    <meta name="generator" content={Astro.generator}>
     <SEO
       title={title}
       description={description}
@@ -55,7 +55,7 @@ const {
       type="application/rss+xml"
       title="ARV's Blog RSS"
       href={new URL("rss.xml", Astro.site)}
-    />
+    >
     <script is:inline set:html={themeInit} />
   </head>
   <body class="relative w-full min-h-screen flex flex-col" {...props}>

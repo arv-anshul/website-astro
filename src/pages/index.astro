@@ -55,10 +55,8 @@ const info = await loadInfoData();
 ---
 
 <BaseLayout nav={{ sticky: true }} title="Home - ARV">
-  <div
-    class="gap-10 flex flex-1 flex-col items-center justify-center text-center"
-  >
-    <div class="flex flex-col items-center gap-5">
+  <div class="gap-10 flex flex-col items-center justify-center text-center">
+    <header class="flex flex-col items-center gap-5">
       <Image
         alt="arv-anshul"
         class="w-60 rounded-full"
@@ -68,16 +66,15 @@ const info = await loadInfoData();
       />
       <h1 class="font-extrabold text-3xl">{info.name}</h1>
       <p class="text-justify">{info.intro_text}</p>
-    </div>
+    </header>
 
-    <div class="w-full">
+    <section class="w-full">
       <h2 class="font-bold text-2xl text-fd-foreground" id="refer-to">
         Refer To
       </h2>
 
       <ItemGroup class="grid grid-cols-1 mt-4 gap-4 sm:grid-cols-2">
-        {
-          referLinks.map((item) => (
+        {referLinks.map((item) => (
             <Item variant="outline" as="a" href={item.url}>
               <ItemMedia variant="icon" class="border-none rounded">
                 <Icon name={item.icon} />
@@ -92,19 +89,17 @@ const info = await loadInfoData();
                 <Icon name="lucide:arrow-right" size={18} />
               </ItemContent>
             </Item>
-          ))
-        }
+          ))}
       </ItemGroup>
-    </div>
+    </section>
 
-    <div class="w-full">
+    <section class="w-full">
       <h2 class="prose font-bold text-2xl text-fd-foreground" id="tech-stack">
         Tech Stack
       </h2>
 
       <ItemGroup class="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
-        {
-          Object.entries(info.tech_stack).map(([category, items]) => (
+        {Object.entries(info.tech_stack).map(([category, items]) => (
             <Item variant="outline" class="flex flex-col gap-3">
               <ItemTitle class="font-bold">{category}</ItemTitle>
               <ItemDescription class="flex flex-wrap justify-center gap-3">
@@ -119,9 +114,8 @@ const info = await loadInfoData();
                   ))}
               </ItemDescription>
             </Item>
-          ))
-        }
+          ))}
       </ItemGroup>
-    </div>
+    </section>
   </div>
 </BaseLayout>

@@ -11,14 +11,14 @@ const { friends } = await loadFriendsData();
   description="Meet my awesome friends."
   nav={{ sticky: true }}
 >
-  <div class="flex flex-col flex-1 items-center justify-center text-center">
+  <header class="text-center">
     <h1 class="font-extrabold text-3xl font-heading">Friends</h1>
     <p class="text-xl text-muted-foreground">
       Meet the awesome people and projects I follow.
     </p>
+  </header>
 
-    <div class="mt-10 w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
-      {friends.map((friend) => <FriendCard friend={friend} />)}
-    </div>
-  </div>
+  <section class="mt-10 w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
+    {friends.map((friend) => <FriendCard friend={friend} />)}
+  </section>
 </BaseLayout>

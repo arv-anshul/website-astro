@@ -18,8 +18,7 @@ const posts = await getCollection("blog");
       Latest Blog Posts
     </h1>
     <ItemGroup class="grid gap-3 md:grid-cols-2">
-      {
-        posts
+      {posts
           .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
           .map((post) => (
             <FrontmatterCard
@@ -27,8 +26,7 @@ const posts = await getCollection("blog");
               href={`/v2/blog/${getBlogSlugs(post.id).pop()}`}
               data={post.data}
             />
-          ))
-      }
+          ))}
     </ItemGroup>
   </div>
 </BaseLayout>
