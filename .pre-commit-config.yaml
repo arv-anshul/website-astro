@@ -1,5 +1,5 @@
 repos:
-  - repo: "https://github.com/pre-commit/pre-commit-hooks"
+  - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v6.0.0
     hooks:
       - id: trailing-whitespace
@@ -7,6 +7,8 @@ repos:
       - id: check-yaml
       - id: check-json
       - id: check-added-large-files
+        args:
+          - --maxkb=5000 # 5MB
 
   - repo: https://github.com/rvben/rumdl-pre-commit
     rev: v0.1.15
