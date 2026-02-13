@@ -6,7 +6,11 @@ import { loadFriendsData } from "@/lib/data-loaders/friends";
 const { friends } = await loadFriendsData();
 ---
 
-<BaseLayout title="Friends - ARV" description="Meet my awesome friends.">
+<BaseLayout
+  title="Friends - ARV"
+  description="Meet my awesome friends."
+  nav={{sticky: true}}
+>
   <main
     class="flex flex-col flex-1 items-center justify-center px-4 py-8 text-center"
   >

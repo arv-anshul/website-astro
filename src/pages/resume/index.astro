@@ -5,7 +5,11 @@ import BaseLayout from "@/layouts/base-layout.astro";
 const redirectUrl = joinPaths(Astro.url.toString(), "basic");
 ---
 
-<BaseLayout title="Resume - ARV" description="Resume of ARV in PDF format.">
+<BaseLayout
+  title="Resume - ARV"
+  description="Resume of ARV in PDF format."
+  nav={{sticky: true}}
+>
   <p>Redirecting to <a href={redirectUrl}>resume</a>...</p>
 </BaseLayout>
 

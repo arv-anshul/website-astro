@@ -35,36 +35,31 @@ const endLinks = [
 
 <header
   class:list={[
-    "backdrop-blur-sm font-mono",
-    sticky ? "sticky top-3 z-40" : "py-3"
+    "backdrop-blur-sm font-mono bg-foreground/10",
+    sticky ? "sticky top-0 z-40" : ""
   ]}
 >
-  <div class="max-w-7xl mx-auto px-4 xl:px-0">
-    <div
-      class="flex items-center justify-between gap-x-2 rounded-lg py-1 px-2 border border-foreground/3 bg-foreground/10 lg:grid lg:grid-cols-[1fr_auto_1fr] lg:justify-stretch lg:gap-x-12"
-    >
-      <!-- Home/Logo -->
-      <div class="flex items-center">
-        <a
-          href={homeLink.href}
-          title={homeLink.title}
-          class="flex items-center"
-        >
-          <OmSvg
-            class="fill-foreground stroke-foreground"
-            height="30"
-            width="30"
-          />
-        </a>
-      </div>
+  <div
+    class="flex items-center justify-between md:w-6/8 mx-auto px-4 md:px-0 gap-x-4 py-1"
+  >
+    <!-- Home/Logo -->
+    <div class="flex items-center">
+      <a href={homeLink.href} title={homeLink.title} class="flex items-center">
+        <OmSvg
+          class="fill-foreground stroke-foreground"
+          height="30"
+          width="30"
+        />
+      </a>
+    </div>
 
-      <!-- Desktop Navigation -->
-      <nav class="mr-auto">
-        <ul class="flex items-center md:gap-4">
-          {middleLinks.map((link) => (
+    <!-- Desktop Navigation -->
+    <nav class="ml-2 mr-auto">
+      <ul class="flex items-center gap-5">
+        {middleLinks.map((link) => (
             <li>
               <a
-                class="flex items-center gap-x-1 p-2 text-sm font-medium text-foreground hover:opacity-70 transition-opacity"
+                class="flex items-center gap-x-1 text-sm font-medium text-foreground hover:opacity-70 transition-opacity"
                 href={link.href}
               >
                 <Icon name={link.icon} class="hidden md:inline" />
@@ -72,26 +67,25 @@ const endLinks = [
               </a>
             </li>
           ))}
-        </ul>
-      </nav>
+      </ul>
+    </nav>
 
-      <!-- End Links (Desktop Icons) -->
-      <div class="flex items-center gap-x-10 justify-self-end">
-        <div class="flex items-center gap-x-1">
-          {endLinks.map((link) => (
+    <!-- End Links (Desktop Icons) -->
+    <div class="flex items-center gap-x-10 justify-self-end">
+      <div class="flex items-center gap-x-1">
+        {endLinks.map((link) => (
             <Button
               href={link.href}
               title={link.title}
               variant="ghost"
-              size="icon-sm"
+              size="icon"
               class="hover:opacity-70 transition-opacity"
             >
               <Icon name={link.icon}/>
             </Button>
           ))}
 
-          <ThemeToggle size="sm" />
-        </div>
+        <ThemeToggle size="sm" />
       </div>
     </div>
   </div>
