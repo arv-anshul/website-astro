@@ -3,6 +3,7 @@
 import { Icon } from "astro-icon/components";
 import OmSvg from "public/favicon.svg";
 import { ThemeToggle } from "@/components/starwind/theme-toggle";
+import { cn } from "@/lib/utils";
 import Button from "../starwind/button";
 
 interface Props {
@@ -34,10 +35,10 @@ const endLinks = [
 ---
 
 <header
-  class:list={[
+  class={cn(
     "backdrop-blur-sm font-mono bg-accent/70",
     sticky ? "sticky top-0 z-40" : "",
-  ]}
+  )}
 >
   <div
     class="flex items-center justify-between md:w-2/3 xl:w-3/5 mx-auto px-4 md:px-0 gap-x-4 py-1"

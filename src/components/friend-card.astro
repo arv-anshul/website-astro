@@ -11,6 +11,7 @@ import {
   CardTitle,
 } from "@/components/starwind/card";
 import type { FriendsData } from "@/lib/data-loaders/friends";
+import { cn } from "@/lib/utils";
 
 interface Props extends HTMLAttributes<"div"> {
   friend: FriendsData["friends"][number];
@@ -19,7 +20,7 @@ interface Props extends HTMLAttributes<"div"> {
 const { friend, class: className, ...props } = Astro.props as Props;
 ---
 
-<Card class:list={["items-center gap-3", className]} {...props} data-card>
+<Card class={cn("items-center gap-3", className)} {...props} data-card>
   <a href={friend.primary_url} target="_blank" class="h-30 w-30">
     <Image
       src={friend.avatar}

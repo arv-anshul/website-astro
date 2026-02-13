@@ -11,6 +11,7 @@ import {
   CardTitle,
 } from "@/components/starwind/card";
 import type { ProjectsData } from "@/lib/data-loaders/projects";
+import { cn } from "@/lib/utils";
 
 type Project = ProjectsData["projects"][number];
 
@@ -21,7 +22,7 @@ interface Props extends HTMLAttributes<"div"> {
 const { project, class: className, ...props } = Astro.props as Props;
 ---
 
-<Card class:list={["pt-4 gap-3 rounded", className]} {...props}>
+<Card class={cn("pt-4 gap-3 rounded", className)} {...props}>
   <CardHeader class="flex flex-wrap justify-between items-start px-3 md:px-5">
     <div>
       <CardTitle class="flex items-center gap-1 font-bold">
