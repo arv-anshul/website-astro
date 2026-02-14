@@ -1,14 +1,17 @@
-# ARV - Website
+# ARV - Personal Website
 
-Made with Astro framework.
+Made with [Bun] + [Astro] + [Tailwind CSS] + [Starwind UI].
 
 ## Features
 
-1. Open Graph Image generation using [Takumi](https://takumi.kane.tw).
+1. Open Graph Image generation using [Takumi].
 2. Blog rendering from Markdown and MDX files.
 3. Load structured data from YAML/JSON files and render on web page.
-4. Uses [Starwind UI](https://starwind.dev) for customizable Astro components.
-5. Use [`pre-commit`](https://pre-commit.com) (with [`prek`](https://prek.j178.dev)) to format and lint code.
+4. Uses [Starwind UI] for customizable Astro components.
+5. Use `pre-commit` and `pre-push` hooks (via [prek]) to format and lint code.
+6. Currently, app is deployed on GitHub Pages using GitHub Actions.
+7. RSS feed generation.
+8. Mermaid diagrams rendering.
 
 ## Tech Stack
 
@@ -19,3 +22,10 @@ Made with Astro framework.
 | JS Libraries & Packages | ![Iconify](https://img.shields.io/badge/Iconify-026C9C?logo=iconify&logoColor=fff) ![Zod](https://img.shields.io/badge/Zod-408AFF?logo=zod&logoColor=fff)                                                                                                                                                                                                                                                                                |
 | Development Environment | ![Zed Industries](https://img.shields.io/badge/Zed%20Industries-084CCF?logo=zedindustries&logoColor=fff)                                                                                                                                                                                                                                                                                                                                 |
 | CI/CD                   | ![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?logo=githubactions&logoColor=fff) ![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222222?logo=githubpages&logoColor=fff)                                                                                                                                                                                                                              |
+
+[Astro]: https://astro.build
+[Bun]: https://bun.sh
+[prek]: https://prek.j178.dev
+[Starwind UI]: https://starwind.dev
+[Tailwind CSS]: https://tailwindcss.com
+[Takumi]: https://takumi.kane.tw
