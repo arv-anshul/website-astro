@@ -7,6 +7,19 @@
       "linter": {
         "enabled": false
       }
+    },
+    {
+      "includes": [
+        "src/pages/blog/index.astro",
+        "src/pages/resume/index.astro"
+      ],
+      "linter": {
+        "rules": {
+          "correctness": {
+            "noUndeclaredVariables": "off"
+          }
+        }
+      }
     }
   ]
 }

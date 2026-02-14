@@ -34,6 +34,10 @@
     {
       "name": "theme-toggle",
       "version": "1.0.0"
+    },
+    {
+      "name": "pagination",
+      "version": "3.0.2"
     }
   ]
 }

@@ -45,6 +45,7 @@ const isSmall = variant === "small";
   variant={isSmall ? "outline" : "muted"}
   class={cn(
     "flex flex-col items-start gap-2",
+    isSmall && "h-full",
     !isSmall && "w-full border-muted",
     className,
   )}
@@ -87,7 +88,9 @@ const isSmall = variant === "small";
     </ItemMedia>
   </div>
 
-  <ItemDescription>{data.description}</ItemDescription>
+  <ItemDescription class="text-wrap mb-auto">
+    {data.description}
+  </ItemDescription>
 
   {!isSmall && backPageUrl && (
       <a

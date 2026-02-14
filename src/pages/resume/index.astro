@@ -14,6 +14,5 @@ const redirectUrl = joinPaths(Astro.url.toString(), "basic");
 </BaseLayout>
 
 <script is:inline define:vars={{ redirectUrl }}>
-  // biome-ignore lint/correctness/noUndeclaredVariables: biome lacks the feature
   window.location.replace(redirectUrl);
 </script>
